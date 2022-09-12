@@ -1,15 +1,17 @@
 import sys
 import userInterface
-from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
+from PySide6.QtWidgets import QApplication
 
-if __name__ == "__main__":
+def main():
     app = QApplication([])
-
     window = userInterface.MainWindow()
     window.show()
+    sys.exit(app.exec_())
 
 
-    app.exec_()
+
+if __name__ == "__main__":
+    main()    
 
 
 

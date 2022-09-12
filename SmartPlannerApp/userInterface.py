@@ -1,20 +1,34 @@
 import sys
-from PySide6.QtWidgets import QMainWindow, QPushButton
+from PySide6.QtWidgets import QMainWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-
         self.setWindowTitle("Smart Planner Tool")
+        self.resize(720, 480)
+        self.setAcceptDrops(True)
 
-        button = QPushButton("Browse")
-        button.setCheckable(True)
-        button.clicked.connect(self.button_clicked)
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasUrls():
+            event.accept()
+        else:
+            event.ignore()
 
-        self.setCentralWidget(button)
+    def dropEvent(self, event):
+        files = [u.toLocalFile() for u in event.mimeData().urls()]
+        for f in files:
+            print(f)
 
-    def button_clicked(self):
-        print("Clicked!")
+
+
+        # button = QPushButton("Browse")
+        # button.setCheckable(True)
+        # button.clicked.connect(self.button_clicked)
+
+        # self.setCentralWidget(button)
+
+#     def button_clicked(self):
+#         print("Clicked!")
 
 
 
