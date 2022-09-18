@@ -1,21 +1,27 @@
 import sys
 from PySide6.QtWidgets import QMainWindow
 
+path = "./Input"
+
 class MainWindow(QMainWindow):
-	def __init__(self):
-		super().__init__()
-		self.setWindowTitle("Smart Planner Tool")
-		self.resize(720, 480)
-		self.setAcceptDrops(True)
+    global path
 
-	def dragEnterEvent(self, event):
-		if event.mimeData().hasUrls():
-			event.accept()
-		else:
-			event.ignore()
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Smart Planner Tool")
+        self.resize(720, 480)
+        self.setAcceptDrops(True)
 
-	def dropEvent(self, event):
-		files = [u.toLocalFile() for u in event.mimeData().urls()]
-		for f in files:
-			print(f)
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasUrls():
+            event.accept()
+        else:
+            event.ignore()
 
+    def dropEvent(self, event):
+        files = [u.toLocalFile() for u in event.mimeData().urls()]
+        for f in files:
+            path = f
+    
+    def getPath(self):
+        return path

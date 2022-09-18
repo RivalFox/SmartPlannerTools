@@ -1,0 +1,6 @@
+Computer Science - Software SystemsRequired Courses for Areas F, G & H2019-2020 CatalogLegendMATH 1113Pre-CalculusFa Sp SuMATH 2125Intro to DiscreteMathFa Sp SuCPSC 1301KComputerScience 1Fa Sp SuCPSC 1302ComputerScience 2Fa Sp SuCPSC 2105ComputerOrganizationFa Sp Su
+CYBR 2106Intro to InformationSecurityFa Sp SuCYBR 2159Fundamentals ofComputer NetworkingFa Sp -- CPSC 2108DataStructuresFa Sp Su
+CPSC 3131DatabaseSystems IFa Sp -- CPSC 3125OperatingSystemsFa Sp -- CPSC 3121Assembly I-- Sp -- CPSC 5157ComputerNetworksFa -- SuMATH 5125DiscreteMathFa Sp SuCPSC 3175Object-OrientedDesignFa Sp -- 
+CPSC 5115Algorithm Analysis& DesignFa -- -- CPSC 3165Professionalismin ComputingFa Sp Su(Must be Jr/Sr)CPSC 4175SoftwareEngineeringFa -- -- CPSC 5135ProgrammingLanguages-- Sp -- 
+CPSC 4000Baccalaureate SurveyFa Sp Su(Take last semester)CPSC 5155ComputerArchitectureFa -- -- CPSC 3000+TechnicalElectiveFa Sp ??
+CPSC 3000+TechnicalElectiveFa Sp ??CPSC 4176Senior SoftwareEng. Project-- Sp -- CPSC 5128Theory ofComputation-- Sp -- Rubric NumberCourse nameFall Spring SummerRecommendedCo-requisitePrerequisite
