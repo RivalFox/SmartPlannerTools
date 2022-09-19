@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SmartPlannerApp"
+    "\\SmartPlannerApp",
+    "\\SmartPlannerApp\\Input"
   ],
-  "SelectedNode": "\\SmartPlannerApp\\Parser.py",
+  "SelectedNode": "\\SmartPlannerApp\\main.py",
   "PreviewInSolutionExplorer": false
 }

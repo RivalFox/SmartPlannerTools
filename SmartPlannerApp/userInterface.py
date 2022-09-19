@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import QMainWindow
 
-path = "./Input"
+path = ".\Input"
 
 class MainWindow(QMainWindow):
     global path
@@ -22,6 +22,8 @@ class MainWindow(QMainWindow):
         files = [u.toLocalFile() for u in event.mimeData().urls()]
         for f in files:
             path = f
-    
+        
+
     def getPath(self):
+        
         return path

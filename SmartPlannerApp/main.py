@@ -10,9 +10,13 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 def main():
     app = QApplication([])
     window = userInterface.MainWindow()
-    window.show()
 
+# Need to have the program wait for the input path given by the interface
+    window.show()
+# Accepts the path of the input folder 
     parse(window.getPath())
+# 
+
 
     extractData(getPath(), getInput(), getPrereq())
 
