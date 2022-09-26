@@ -1,35 +1,41 @@
-import argparse
+#import argparse
+#import os
+#from pathlib import Path
+#from stat import FILE_ATTRIBUTE_INTEGRITY_STREAM
+
 import os
 from pathlib import Path
-from stat import FILE_ATTRIBUTE_INTEGRITY_STREAM
 
-cpath = ""
+path = ""
 inputFile = ""
 prereqFile = ""
 
-def parse(path):
-    global inputFile, prereqFile, cpath
 
-    path = Path(path)
+class MainParser():
 
-    if path.exists() == False:
-        print("The directory does not exist")
-        exit()
-    else:
-        print("The directory does exist")
-        cpath = path
+	def parseData(self, dirPath):
+		global inputFile, prereqFile, path
+		path = Path(dirPath)
 
-    for file in os.listdir(cpath):
-        if "Input" in file:
-            inputFile = file
-        if "Prerequisite" in file:
-            prereqFile = file
+		if path.exists() == False:
+			print("The directory does not exist")
+			exit()
+		else:
+			print("The directory does exist")
 
-def getInput():
-    return inputFile
+		for file in os.listdir(path):
+			if "Input" in file:
+				inputFile = file
+			if "Prerequisite" in file:
+				prereqFile = file
 
-def getPrereq():
-    return prereqFile
+	def getPath(self):
+		   return path
+	
+	def getInput(self):
+		return inputFile
 
-def getPath():
-    return cpath
+	def getPrereq(self):
+		return prereqFile
+
+
