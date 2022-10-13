@@ -1,39 +1,28 @@
-#from cgi import print_directory
-#import sys
-#from tkinter.tix import InputOnly
-#import userInterface
-#from Parser import *
-#from Extractor import extractData
-#from pathlib import Path
-#from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
-
-import Extractor
-import Parser
+from Analyzer import analyzeData, getClassSchedule
+from Compiler import compileData
+from Extractor import extractData, getFileName, getCPSCName, getCYBRName
+from ArgumentParser import argParser, getPath, getInput, getPathName, getCPSC, getCYBR
+from Database import setDatabase, getDatabase
 import sys
-import userInterface 
-
-from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
-
+import os
+import re
 
 def main():
-	app = QApplication([])
-	window = userInterface.MainWindow()
-# Need to have the program wait for the input path given by the interface
-	window.show()
-# Accepts the path of the input folder 
-	parser = Parser.MainParser()
-	parser.parseData(window.getPath())
-#
-	extractor = Extractor.MainExtractor()
-	extractor.extractData(parser.getPath(), parser.getInput(),parser.getPrereq())
 
-	#extractData(getPath(), getInput(), getPrereq())
-	#extracted_data = extractor(parsed_args.path)
-	#instructions = analyzer(extracted_data.input1, extracted_data.input2, extracted_data.input3)
-	#output = compiler(extracted_data, instructions)
-	#place_output_in_folder(output)
+	# Accepts the path of the input folder 
+	cpscList = {}
+	argParser()
+	extractData(getPath(), getInput(), getCPSC(), getCYBR())
+	setDatabase(getPath(), getCPSCName())
+	setDatabase(getPathName(), getCYBRName())
+	print(getDatabase("CPSC 4000"))
+	print(getDatabase("CPSC 1302"))
+	print(getDatabase("CPSC 6190"))
+	print(getDatabase("CYBR 4416"))
+	print(getDatabase("CPSC 1301K"))
 
-	sys.exit(app.exec())
+	analyzeData(getPathName(), getFileName())
+	compileData(getPathName(), getClassSchedule())
 
 if __name__ == "__main__":
 	main()
