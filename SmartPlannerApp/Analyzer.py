@@ -1,100 +1,61 @@
-def analyzeData(path, filename):
+InputDict = {}
+    
+def analyzeData(path, filename, database):
     # Open and Read File
-    filename = "modifiedInputText.txt"
     inputFile = open(path + "\\" + filename)
-
-    # Initialize an empty list
-    classList = []
-   
+    DatabaseDict = database
+    InputDict = {}
+    #classList = []
+    phrase = "Needed"
+    #count = 0
     for line in inputFile:
-        line = line.replace(".", "")
-        line = line.replace('\n', "")
-        line = line.replace(" ", "")
+        #Finds the line that contains the phrase "Needed"
+        if line.find(phrase) != -1: 
+            #Once found, moves onto the next line
+            nextLine = next(inputFile)
+            for word in nextLine.split():
 
-        lineList = (line.split(","))
-        classList.append(lineList)
-    inputFile.close()
-    
+                if word.isupper() and len(word) == 4:
+                    #print(word)
+
+                    for num in nextLine.split():
+                        if num[0].isdigit() and len(num) > 3:
+                         #print(word + " " + num[:4])
+                         #classList.append(word + " " + num[:4])
+                         className = word + " " + num[:4]
+
+                         InputDict[className] = {}
+                         InputDict[className]["Name"] = className
+                         #Dictionary[word + " " + num[:4]]["Name"] = {}
+
+
     #print(classList)
-    topologicalSort(path, classList)
-    
-    # Check if a subject is a prerequisite of other subject
-def checkPrereq(subject, new, target):
-    # Find Target Subject
-    prereqList = []
-    foundNew = False
-    foundTarget = False
-    
-    for prereq in subject:
-        if(prereq[0] == target):
-            prereqList = prereq
-            if(new in prereqList):
-                foundNew = True
-        if(prereq[0] == new):
-            prereqList = prereq
-            if(target in prereqList):
-                foundTarget = True
-                
-    # Check if new is in the prerequisite list of target
-    return foundNew and foundTarget
+    for key, value in DatabaseDict.items():
+        t = InputDict.get(key)
+        if t == None:
+            print(key + " is not present")
+        else:
+            InputDict[key] = value
 
-def topologicalSort(path, subject):
-    
-    # Init a copy of Subject List and an empty list to contain results
-    copySubject = subject
-    result = []
-    className = ""
-    
-    # Iterate until the subject list is empty -> no more nodes in graph
-    while(len(subject) != 0):
-        # Find subject without any input edges
-        for subjects in subject:
-            
-            # Init empty list to contain subjects in each semester
-            semesterList = []
-            
-            # Get the subjects if the length of the list is 1 -> In-Degree = 0
-            if(len(subjects) == 1):
-                className = subjects[0]
-                semesterList.append(className)
-                
-                # Remove the subject from current list
-                subject.remove(subjects) 
-                
-                # Append the subject to corresponding semester
-                for rest in subject:
-                    if(len(rest) == 1 and not checkPrereq(copySubject, rest[0], className)):
-                        className = rest[0]
-                        semesterList.append(className)
-                        
-                        # Remove the subject from current list
-                        subject.remove(rest)
-                        
-                # Add each semester to the end result
-                result.append(semesterList)
-            
-            # Remove the subject from remaining list (graph nodes connected with the subject)
-            for choosen in semesterList:
-                for remaining in subject:
-                    if(choosen in remaining):
-                        remaining.remove(choosen)                
-                    
-        #print(subject)
-    schedule(path, result)
+    List = []
+    for key, value in InputDict.items():
+        if InputDict[key].get("Credits") == None:
+            List.append(key)
+        print(key, ":", value)
 
-def schedule(path, sortedResult):
-    # Init counter
-    with open(".\\" + path + "\\classSchedule.txt", "w") as f:
-    # Iterate over result
-        for semester in sortedResult:
-            for idx in range(len(semester)):
-                if(idx == len(semester) - 1):
-                    f.writelines(semester[idx] + '\n')
-                    #print(semester[idx])
-                else:
-                    f.writelines(semester[idx] + '\n')
-                    #print(semester[idx])
-    f.close()
+    for i in range(len(List)):
+        InputDict.pop(List[i])
+        print(List[i], " has been popped")
 
-def getClassSchedule():
-    return "classSchedule.txt"
+    for key, value in InputDict.items():
+        print(key, ":", value)
+
+
+    #inputFile.close()
+
+
+
+
+
+
+    ##Check if a certain class has pre-req classes##

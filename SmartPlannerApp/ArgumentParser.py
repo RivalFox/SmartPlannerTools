@@ -7,8 +7,6 @@ from pathlib import Path
 path = ""
 pathName = ""
 inputFile = ""
-cpscFile = ""
-cybrFile = ""
 
 def argParser():
 	arg_parse = argparse.ArgumentParser(description='Folder path location')
@@ -16,17 +14,13 @@ def argParser():
 	findFiles(arg_parse.parse_args())
 
 def findFiles(dirPath):
-	global path, pathName, inputFile, cpscFile, cybrFile
+	global path, pathName, inputFile
 	path = dirPath.path
 	pathName = str(path)
 
 	for file in os.listdir(path):
 		if "Sample" in file:
 			inputFile = file
-		if "cpsc.pdf" in file:
-			cpscFile = file
-		if "cybr.pdf" in file:
-			cybrFile = file
 
 def getPath():
 	return path
@@ -36,9 +30,3 @@ def getPathName():
 	
 def getInput():
 	return inputFile
-
-def getCPSC():
-	return cpscFile
-
-def getCYBR():
-	return cybrFile
