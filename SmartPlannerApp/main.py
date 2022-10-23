@@ -1,5 +1,5 @@
-from Analyzer import analyzeData
-#from Compiler import compileData
+from Analyzer import analyzeData, getInputDatabase
+from Compiler import compileData
 from Extractor import extractData, getInputFileName
 from ArgumentParser import argParser, getPath, getInput, getPathName
 from Database import setDatabase, getDatabase
@@ -16,11 +16,8 @@ def main():
 	extractData(getPath(), getInput())
 	extractHTML()
 	setDatabase(getDictionary())
-	for key, value in getDatabase().items():
-		print(key, ':', value)
-
 	analyzeData(getPathName(), getInputFileName(), getDatabase())
-	#compileData(getPathName(), getClassSchedule())
+	compileData(getInputDatabase())
 
 if __name__ == "__main__":
 	main()

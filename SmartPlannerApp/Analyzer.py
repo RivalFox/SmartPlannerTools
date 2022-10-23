@@ -1,6 +1,7 @@
 InputDict = {}
     
 def analyzeData(path, filename, database):
+    global InputDict
     # Open and Read File
     inputFile = open(path + "\\" + filename)
     DatabaseDict = database
@@ -32,25 +33,24 @@ def analyzeData(path, filename, database):
     #print(classList)
     for key, value in DatabaseDict.items():
         t = InputDict.get(key)
-        if t == None:
-            print(key + " is not present")
-        else:
+        if t != None:
             InputDict[key] = value
+        #else:
+            #print("")
 
     List = []
     for key, value in InputDict.items():
         if InputDict[key].get("Credits") == None:
             List.append(key)
-        print(key, ":", value)
+        #print(key, ":", value)
 
     for i in range(len(List)):
         InputDict.pop(List[i])
-        print(List[i], " has been popped")
-
-    for key, value in InputDict.items():
-        print(key, ":", value)
+        #print(List[i], " has been popped")
 
 
+def getInputDatabase():
+    return InputDict
     #inputFile.close()
 
 

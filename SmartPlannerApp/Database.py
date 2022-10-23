@@ -8,6 +8,4 @@ def setDatabase(dictionary):
             
 
 def getDatabase():
-    #for key, value in DatabaseDict.items():
-    #    print(key, ':', value)
     return DatabaseDict
