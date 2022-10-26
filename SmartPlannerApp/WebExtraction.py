@@ -202,6 +202,8 @@ def extractHTML():
 				elif i == 2 and DatabaseDict.get(string) == None and string[-1] != "~":	
 				#	print("added to credit")
 					addtoCredit(temp, string)
+					DatabaseDict[temp]["Semester"] = {}
+					addtoSemester(temp)
 					i = 0
 				else:
 					prereq = prereqMode(string)
@@ -256,6 +258,11 @@ def addtoCredit(key, string):
 
 def addtoPrerequisite(key, string):
 	DatabaseDict[key]["Prerequisite"][string.replace("~", "")] = ""
+
+def addtoSemester(key):
+	DatabaseDict[key]["Semester"]["Spring"] = True
+	DatabaseDict[key]["Semester"]["Summer"] = False
+	DatabaseDict[key]["Semester"]["Fall"] = True
 
 def getDictionary():
 	return DatabaseDict

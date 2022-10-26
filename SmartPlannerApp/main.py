@@ -16,12 +16,12 @@ def main():
 	argParser()
 	extractData(getPath(), getInput())
 
-	#with open('.\Input\saved_dictionary.pkl', 'rb') as f:
-	#	Database = pickle.load(f)
-	#setDatabase(Database)
+	with open('.\Input\saved_dictionary.pkl', 'rb') as f:
+		Database = pickle.load(f)
+	setDatabase(Database)
 
-	extractHTML()
-	setDatabase(getDictionary())
+	#extractHTML()
+	#setDatabase(getDictionary())
 	analyzeData(getPathName(), getInputFileName(), getDatabase())
 	compileData(getInputDatabase())
 
