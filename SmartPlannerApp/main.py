@@ -7,6 +7,7 @@ from WebExtraction import extractHTML, getDictionary
 import sys
 import os
 import re
+import pickle
 
 def main():
 
@@ -14,8 +15,13 @@ def main():
 	cpscList = {}
 	argParser()
 	extractData(getPath(), getInput())
-	extractHTML()
-	setDatabase(getDictionary())
+
+	with open('.\Input\saved_dictionary.pkl', 'rb') as f:
+		Database = pickle.load(f)
+	setDatabase(Database)
+
+	#extractHTML()
+	#setDatabase(getDictionary())
 	analyzeData(getPathName(), getInputFileName(), getDatabase())
 	compileData(getInputDatabase())
 

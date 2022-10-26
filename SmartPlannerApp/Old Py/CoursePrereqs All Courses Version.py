@@ -3,21 +3,10 @@ import requests
 from bs4 import BeautifulSoup, SoupStrainer
 
 DatabaseDict = {}
-SwitchPrereqDict = {
-				"Prerequisite(s):" : True,
-				"Repeatability:" : False,
-				"Restriction(s):" : False,
-			 }
-
-SwitchLoopDict = {
-				"Home" : True,
-				"Columbus State University" : False,
-			 }
 i = 0
 
-def extractHTML():
-	global DatabaseDict 
-	#'''
+def CourseDescrptions():
+	'''
 	links = ["https://catalog.columbusstate.edu/course-descriptions/acct/", 
 		  "https://catalog.columbusstate.edu/course-descriptions/anth/", 
 		  "https://catalog.columbusstate.edu/course-descriptions/arab/", 
@@ -99,7 +88,6 @@ def extractHTML():
 		  "https://catalog.columbusstate.edu/course-descriptions/msol/",
 		  "https://catalog.columbusstate.edu/course-descriptions/mssl/",
 		  "https://catalog.columbusstate.edu/course-descriptions/musc/",
-		  "https://catalog.columbusstate.edu/course-descriptions/musa/",
 		  "https://catalog.columbusstate.edu/course-descriptions/muse/",
 		  "https://catalog.columbusstate.edu/course-descriptions/musp/",
 		  "https://catalog.columbusstate.edu/course-descriptions/nurs/",
@@ -127,19 +115,21 @@ def extractHTML():
 		  "https://catalog.columbusstate.edu/course-descriptions/edmg/",
 		  "https://catalog.columbusstate.edu/course-descriptions/edrg/",
 		  "https://catalog.columbusstate.edu/course-descriptions/elem/",
-		  "https://catalog.columbusstate.edu/course-descriptions/fta/",
-		  "https://catalog.columbusstate.edu/course-descriptions/gfa/",
-		  "https://catalog.columbusstate.edu/course-descriptions/mba/",
-		  "https://catalog.columbusstate.edu/course-descriptions/mph/",
 		  "https://catalog.columbusstate.edu/course-descriptions/wmba/"]
-	#'''
+	'''
 
-	#links = ["https://catalog.columbusstate.edu/course-descriptions/wbit/"]
+	links = ["https://catalog.columbusstate.edu/course-descriptions/cpsc/"]
 
 	#fta
 	#gfa
 	#mba
 	#mph
+
+	#arte
+	#edci
+	#edmg
+	#edrg
+	#elem
 
 	for url in links:
 		list = []
@@ -152,109 +142,65 @@ def extractHTML():
 		tempList = []
 		tempList.clear()
 		i = 0
-		loop = False
-		prereq = False
+		loops = False
 		temp = ""
+		prereq = False
 		tempNew = ""
 		print(url)
 		for x in range(len(list)):
-			string = list[x]
-			if loop == True:
+			if loops == True:
+				string = list[x]
 				if "\xa0" in string:
 					string = string.replace("\xa0", " ")
 					string = string + "~"
-				#print(string)
-				if prereq == True:
-					if string[5:8].isdigit() == True:
-				#		print("added to list")
+				if string.startswith("Columbus"):
+					loops = False
+				elif string.startswith("Repeat") or string.startswith("Restric"):
+					prereq = False
+					continue
+				elif string.startswith("Prereq") or prereq == True:
+					if string.startswith("Prereq"):
+						prereq = True
+					elif string[5:9].isdigit() == True:
 						tempList.append(string)
 					else:
 						if not tempList:
 							prereq = False
 						else:
-							if string.startswith("Restric") or string.startswith("Repeata") or string.startswith("Columbus State University"):
-								prereq = prereqMode(string)
+							tempNew = tempList[-1]
+							tempList = tempList[:-1]
 							DatabaseDict[temp]["Prerequisite"] = {}
 							for l in range(len(tempList)):
-				#				print(tempList[l])
-				#				print("added to prerequisite")
-								addtoPrerequisite(temp, tempList[l])
-							if prereq == True:
-								tempNew = tempList[-1]
-				#				print(tempNew)
-				#				print("added to name 2")
-								temp = addtoName(tempNew, tempNew)
-				#				print("added to description 2")
-								addtoDescription(tempNew, string)
-								tempList = tempList[:-1]
-								i = 2
-							prereq = False
+								DatabaseDict[temp]["Prerequisite"][tempList[l].replace("~", "")] = ""
+								prereq = False
+							DatabaseDict[tempNew] = {}
+							DatabaseDict[tempNew]["Name"] = tempNew
+							DatabaseDict[tempNew]["Description"] = string
+							i = 2
 							tempList.clear()
-				elif i == 0 and DatabaseDict.get(string) == None and string[-1] != "~" and string[5:8].isdigit() == True:
-				#	print("added to name")
-					temp = addtoName(string, string)
-					i = 1
+							temp = tempNew
+				elif i == 0 and DatabaseDict.get(string) == None and string[-1] != "~" and string[5:9].isdigit() == True:
+					DatabaseDict[string] = {}
+					DatabaseDict[string]["Name"] = string
+					temp = string
+					i = i + 1
 				elif i == 1 and DatabaseDict.get(string) == None and string[-1] != "~":
-				#	print("added to description")
-					addtoDescription(temp, string)
-					i = 2
-				elif i == 2 and DatabaseDict.get(string) == None and string[-1] != "~":	
-				#	print("added to credit")
-					addtoCredit(temp, string)
+					DatabaseDict[temp]["Description"] = string
+					i = i + 1
+				elif i == 2 and DatabaseDict.get(string) == None and string[-1] != "~":
+					string = string.strip("(,)")		
+					DatabaseDict[temp]["Credits"] = string[-1]		
 					i = 0
-				else:
-					prereq = prereqMode(string)
-					if string.startswith("Columbus State University"):
-						loop = loopChange(string)
-				#	elif string.startswith("Prereq"):
-				#		print("Prereq Mode")
-				#	else:
-				#		print("removed")
-					tempList.clear()
+				else: 
 					continue
-			else:
-				loop = loopChange(string)
-				tempList.clear()
-				continue
-
-	with open('.\Input\saved_dictionary.pkl', 'wb') as f:
-		pickle.dump(DatabaseDict, f)
+			if list[x] == "Home":
+				temp = "Home"
+			elif temp == "Home":
+				temp = ""
+				loops = True
 
 
-	#for key, values in DatabaseDict.items():
-	#	print(key, ":", values)
+	for key, values in DatabaseDict.items():
+		print(key, ":", values)
 
-def prereqMode(string):
-	return SwitchPrereqDict.get(string, False)
-
-def loopChange(string):
-	return SwitchLoopDict.get(string, False)
-
-'''
-def check(num, string):
-	if num == 0 and DatabaseDict.get(string) == None and string[-1] != "~" and string[5:9].isdigit() == True:
-		return True
-	elif num == 1 and DatabaseDict.get(string) == None and string[-1] != "~":
-		return True
-	elif num == 2 and DatabaseDict.get(string) == None and string[-1] != "~":
-		return True
-	else:
-		return False
-'''
-def addtoName(key, string):
-	DatabaseDict[key] = {}
-	DatabaseDict[key]["Name"] = string
-	return string
-
-def addtoDescription(key, string):
-	DatabaseDict[key]["Description"] = string
-
-def addtoCredit(key, string):
-	string = string.strip("(,)")		
-	DatabaseDict[key]["Credits"] = string[-1]
-
-def addtoPrerequisite(key, string):
-	DatabaseDict[key]["Prerequisite"][string.replace("~", "")] = ""
-
-def getDictionary():
-	return DatabaseDict
+CourseDescrptions()

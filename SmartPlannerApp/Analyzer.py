@@ -42,20 +42,12 @@ def analyzeData(path, filename, database):
     for key, value in InputDict.items():
         if InputDict[key].get("Credits") == None:
             List.append(key)
-        #print(key, ":", value)
+        print(key, ":", value)
 
     for i in range(len(List)):
         InputDict.pop(List[i])
-        #print(List[i], " has been popped")
+        print(List[i], " has been popped")
 
 
 def getInputDatabase():
     return InputDict
-    #inputFile.close()
-
-
-
-
-
-
-    ##Check if a certain class has pre-req classes##
