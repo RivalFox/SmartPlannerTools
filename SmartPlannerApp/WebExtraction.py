@@ -1,6 +1,7 @@
 import sys
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
+import pickle
 
 DatabaseDict = {}
 SwitchPrereqDict = {
