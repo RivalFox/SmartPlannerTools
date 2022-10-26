@@ -1,0 +1,1208 @@
+Home
+Home
+›
+›
+Course Descriptions
+Course Descriptions
+›
+›
+CPSC - Computer Science
+CPSC - Computer Science
+
+ 
+2022-2023 EDITION
+CPSC - Computer Science
+CPSC 1105
+ 
+Introduction to Computing Principles and Technology
+ 
+(3-0-3)
+ 
+This course provides an introduction to current and emerging computing principles and technologies used in various
+professional environments. It discusses the nature of information vs data, computer hardware, software, databases,
+programming, web, communications and other information systems-based technology. 
+In addition, the need for
+information privacy and security related to these technologies is discussed. The theory is complemented by practical work
+aimed at gaining basic proficiency with different types of widely used application software.
+CPSC 1301K
+ 
+Computer Science I
+ 
+(3-3-4)
+ 
+This course includes an overview of computers and programming; problem solving and algorithm development; simple
+data types; arithmetic and logic operators; selection structures; repetition structures; text files; arrays (one-and-two-
+dimensional); procedural abstraction and software design; modular programming (including sub-programs or the
+equivalent). It includes a lab component that provides hands on projects to apply and reinforce the topics covered.
+CPSC 1302
+ 
+Computer Science II
+ 
+(3-0-3)
+ 
+A continuation of 
+CPSC 1301K
+. This course emphasizes programming using object-oriented methods. The fundamentals
+used in designing, developing and using classes, encapsulation, inheritance mechanisms, polymorphism and dynamic
+binding.
+Prerequisite(s): 
+(CPSC 1301 with a minimum grade of C or 
+CPSC 1301K
+ with a minimum grade of C or CPSC 1301H with a
+minimum grade of C or CPSC 1301I with a minimum grade of C) and 
+MATH 1113
+ (may be taken concurrently) with a
+minimum grade of C
+CPSC 1555
+ 
+Selected Topics in Computer Science
+ 
+((1-3)-0-(1-3))
+ 
+Study of introductory topics of special interest, independent study, or directed experience in the field of computing. Course
+may be taken three times. A maximum of three credit hours may be applied to the degree program.
+Repeatability: 
+Repeatable for credit up to 2 times or 3 hours.
+CPSC 2105
+ 
+Computer Organization
+ 
+(3-0-3)
+ 
+Overview of basic computer organization. Representation of data in computers. Introduction of Boolean Algebra and logic
+gates used to implement Boolean functions. Introduction to flip-flops and sequential logic. Methods to reduce the
+complexity of Boolean functions-algebraic and K-Maps. Overview of computer arithmetic. Instruction set architecture of a
+sample computer. Interaction of the machine and computer languages including discussion of the compilation, assembly,
+and loading process.
+Prerequisite(s): 
+(CPSC 1301 with a minimum grade of C or 
+CSCI 1301
+ with a minimum grade of C or CPSC 1301H with a
+minimum grade of C or 
+CPSC 1301K
+ with a minimum grade of C or CPSC 1301I with a minimum grade of C) and
+MATH 2125
+ (may be taken concurrently) with a minimum grade of C
+CPSC 2108
+ 
+Data Structures
+ 
+(3-0-3)
+ 
+This course extends the concepts of primitive data types by teaching the student a set of data structures that pervades
+both the theoretical and practical domains of computer science.
+Prerequisite(s): 
+(
+CPSC 1302
+ with a minimum grade of C and 
+MATH 2125
+ with a minimum grade of C) or (CPSC 1302H
+with a minimum grade of C and 
+MATH 2125
+ with a minimum grade of C)
+
+ 
+Menu
+Academic Catalog 2022-2023
+CPSC 2115
+ 
+Information Technology Fundamentals
+ 
+(3-0-3)
+ 
+This course provides students with a foundation in the fundamentals of Information Technology to include the
+fundamental knowledge of the hardware, software and skills necessary to set up and securely use a computer, keep it in
+good working order and perform basic support for PCs and simple computer networks. The lessons include practical setup
+guides, as well as hands-on labs for the student to practice their new skills before deploying these technologies and
+strategies in a production network. Upon completion, a student will be prepared to take and pass the CompTIA IT
+Fundamentals+ industry certification exam.
+CPSC 2125
+ 
+Internet Programming
+ 
+(3-0-3)
+ 
+This course is an introduction to Internet programming and Web application development. Subjects covered include basic
+Web page development and an introduction to dynamic Web page development using client-side scripting, server-side
+scripting, and database connectivity.
+Prerequisite(s): 
+CPSC 1301 with a minimum grade of C or CPSC 1301H with a minimum grade of C or 
+CPSC 1301K
+ with a
+minimum grade of C or CPSC 1301I with a minimum grade of C
+CPSC 2555
+ 
+Selected Topics in Computer Science
+ 
+((1-3)-0-(1-3))
+ 
+Study of topics of special interest, independent study, or directed experience in the field of computing. Course may be taken
+three times. A maximum of three credit hours may be applied to the degree program.
+Prerequisite(s): 
+CPSC 1302
+ with a minimum grade of C or CPSC 1302H with a minimum grade of C
+Repeatability: 
+Repeatable for credit up to 3 times or 3 hours.
+CPSC 3105
+ 
+Digital Multimedia Development
+ 
+(3-0-3)
+ 
+This course teaches the student digital design principles and techniques. Students will learn how to create digital
+multimedia that can be used in software applications and Web sites. As part of this, students will develop an
+understanding of digital image theories, develop an understanding of how to create digital multimedia, analyze the needs
+associated with creating this multimedia, become familiar with the digital multimedia development process and available
+tools, and then implement this process while applying their knowledge to create a working, digital multimedia application
+or Web site.
+Prerequisite(s): 
+CPSC 2125
+ with a minimum grade of C or CPSC 2125H with a minimum grade of C
+CPSC 3111
+ 
+COBOL Programming
+ 
+(3-0-3)
+ 
+Introduction to programming in COBOL. Emphasis on structured design techniques. Computer assignments required.
+Prerequisite(s): 
+CPSC 1302
+ with a minimum grade of C
+CPSC 3116
+ 
+z/OS and JCL
+ 
+(3-0-3)
+ 
+This course presents an overview of IBM mainframe operating systems currently in use in the area. It includes common
+terminology, the most used JCL features, and an introduction to the scripting language REXX and its variants.
+Prerequisite(s): 
+CPSC 1302
+ with a minimum grade of C
+CPSC 3118
+ 
+Graphical User Interface Development
+ 
+(3-0-3)
+ 
+The primary purpose of this course is to provide experience and skills in designing and programming event-driven Windows
+applications using a visual development environment and tools. This course highlights the use of Visual Basic.NET to
+create graphical user interfaces. Extensive lab work and programming required.
+Prerequisite(s): 
+CPSC 1302
+ with a minimum grade of C or CPSC 1302H with a minimum grade of C or CPSC 1302I with a
+minimum grade of C
+CPSC 3121
+ 
+Assembly Language Programming I
+ 
+(3-0-3)
+ 
+An introduction to assembly language for mainframes or PC's. Topics include machine architecture (registers, memory,
+instruction formats), character data processing, decimal arithmetic, binary arithmetic, subroutine and program linkage.
+Prerequisite(s): 
+(
+CPSC 2105
+ with a minimum grade of C or CPSC 2105H with a minimum grade of C) and 
+CPSC 1302
+ with
+a minimum grade of C
+CPSC 3125
+ 
+Operating Systems
+ 
+(3-0-3)
+ 
+An introduction to basic operating system level software concepts. Course topics include processes, threads, symmetric
+multi-processing, thread synchronization and memory management techniques.
+Prerequisite(s): 
+(
+CPSC 2105
+ with a minimum grade of C and 
+CPSC 2108
+ with a minimum grade of C) or (CPSC 2105H
+with a minimum grade of C and 
+CPSC 2108
+ with a minimum grade of C)
+CPSC 3131
+ 
+ Database Systems I
+ 
+(3-0-3)
+ 
+The course covers the fundamentals of database systems. Topics to be covered include the following: file systems and
+database concepts, database models, relational database model, introduction to SQL, database design and
+implementation, database integrity, and normalization of database tables. Implementation techniques using commercial
+DBMS will be considered. The course includes lab work and individual database application programming projects.
+Prerequisite(s): 
+CPSC 1302
+ with a minimum grade of C or CPSC 1302H with a minimum grade of C or CPSC 1302I with a
+minimum grade of C
+CPSC 3137
+ 
+Natural Language Processing and Text Mining
+ 
+(3-0-3)
+ 
+Text mining refers to the mechanisms of extracting meaningful information from unstructured text. This course will focus
+on programming techniques for mining and analyzing texts in order to discover interesting patterns, extract meaningful
+information and to make decisions in real life problems.
+Prerequisite(s): 
+CPSC 1301K
+ with a minimum grade of C
+CPSC 3156
+ 
+Transaction Processing
+ 
+(3-0-3)
+ 
+An introduction to interactive processing in a transaction-based computer system. Topics include multitasking, multi
+threading, maps, pseudo conversational programming and large system design. Standard tools, such as CICS and REXX
+for CICS will be discussed. 
+The course will include an introduction to SOA (Service Oriented Architecture).
+Prerequisite(s): 
+CPSC 3111
+ with a minimum grade of C
+CPSC 3165
+ 
+Professionalism in Computing
+ 
+(3-0-3)
+ 
+The social impact, implications and effects of computers on society, and the responsibilities of computer professionals in
+directing the emerging technology. Includes the examinations of reliable,risk-free technologies, and systems which provide
+user friendly processes. Specific topics include an overview of the history of computing, computer applications and their
+impact, the computing profession, and the legal and ethical responsibilities of professionals.
+Restriction(s):
+Freshman or Sophomore students may 
+not
+ enroll.
+CPSC 3175
+ 
+Object-Oriented Design
+ 
+(3-0-3)
+ 
+An introduction to designing windows applications using object-oriented and component technologies. The emphasis of
+this course is in event-driven programming using controls and components to develop desktop windows applications. The
+primary focus of the course is on the full usage of the Object-Oriented Paradigm for problem-solving and software
+development using an object-oriented programming language and the Standard Object Modeling Language (UML).
+Prerequisite(s): 
+CPSC 2108
+ with a minimum grade of C
+CPSC 3415
+ 
+Information Technology (IT) Practicum
+ 
+(0-5-1)
+ 
+The course is intended for Information Technology (IT) majors to provide an opportunity to develop IT skills through hands-
+on practical experiences in UITS (University Information Technology Services) or another approved organization. 
+The
+student will work in a designated IT unit for a total of 75 hours. 
+The course can be repeated up to two times for credit, but
+should be in different IT units.
+Repeatability: 
+Repeatable for credit up to 2 times or 3 hours.
+Restriction(s):
+Enrollment limited to students majoring in Information Technology, Information Technology - Web or Information
+Technology.
+CPSC 3555
+ 
+Selected Topics in Computer Science
+ 
+((1-3)-0-(1-3))
+ 
+Study of topics of special interest, independent study, or directed experience in the field of computing. Course may be taken
+three times. This course may be taken at most three times with a total of up to 6 credit hours. Second and third time with
+chair approval.
+Prerequisite(s): 
+CPSC 2108
+ with a minimum grade of C
+Repeatability: 
+Repeatable for credit up to 2 times or 6 hours.
+CPSC 4000
+ 
+Baccalaureate Survey
+ 
+(0-0-0)
+ 
+This is a zero-credit hour course that must be taken in the last semester prior to graduation. It includes an outcomes
+assessment for the major and an exit survey. (S/U grading)
+CPSC 4111
+ 
+Game Programming I
+ 
+(3-0-3)
+ 
+This course introduces the student to Game Programming using 2D principles. The student will be exposed to many
+aspects of the process of game programming. The course will concentrate on aspects of 2D game programming taking a
+tour of all aspects of the creation of games including game production; language and architecture; mathematics, collision
+detection and physics; graphics, textures, artificial intelligence, audio and networking. The student will create a 2D game
+with a game engine.
+Prerequisite(s): 
+(
+CPSC 3118
+ with a minimum grade of C and 
+CPSC 3175
+ with a minimum grade of C)
+CPSC 4112
+ 
+Game Programming II
+ 
+(3-0-3)
+ 
+This course continues the introduction to Game Programming using 3D principles. The student will continue to delve
+deeper in the concepts introduced in the first Game Programming course. The student will be exposed to more advanced
+topics in game programming such as Multiplayer games and Massively Multiplayer Online Games (MMOGs). The student
+will create a 3D game with a game engine.
+Prerequisite(s): 
+(
+CPSC 4111
+ with a minimum grade of C and 
+CPSC 4113
+ (may be taken concurrently) with a minimum
+grade of C)
+CPSC 4113
+ 
+Game Jam
+ 
+(0-3-1)
+ 
+This course is intended for students about to start 
+CPSC 4112
+ to work in teams to create a video game. 
+It is carried out in a
+period of 48 hours. 
+The objective is to create a game prototype from a theme given at the start of class.
+Prerequisite(s): 
+(
+CPSC 4111
+ with a minimum grade of C and 
+CPSC 4112
+ (may be taken concurrently) with a minimum
+grade of C)
+CPSC 4115
+ 
+Algorithms
+ 
+(3-0-3)
+ 
+This course emphasizes the understanding of data structures and algorithms from an analytical perspective rather than
+from an implementation standpoint. The concepts developed allow discussion of the efficiency of an algorithm and the
+comparison of two or more algorithms with respect to space and run-time requirements. Analytical methods are used to
+describe theoretical bounds as well as practical ones. In general, this course addresses the constraints that affect problem
+solvability.
+Prerequisite(s): 
+CPSC 2108
+ with a minimum grade of C and 
+MATH 5125U
+ with a minimum grade of C
+CPSC 4121
+ 
+Robotics Programming I
+ 
+(3-0-3)
+ 
+In this course the basic principles of Robotics programming will be introduced. 
+Various types of robots will be programmed
+to accomplish a series of tasks. 
+Topics include: Design and construction of robotic bases, Design and construction of
+attachments for specific tasks, Microcontroller architecture and programming, and Programming of robots to carry out
+assigned tasks.
+Prerequisite(s): 
+CPSC 1302
+ with a minimum grade of C or CPSC 1302H with a minimum grade of C
+Restriction(s):
+Freshman students may 
+not
+ enroll.
+CPSC 4122
+ 
+Robotics Programming II
+ 
+(3-0-3)
+ 
+More advanced principles of Robotics programming will be utilized. 
+A variety of robots will be programmed to accomplish
+a series of tasks. 
+Topics include: Design and construction of attachments for advanced tasks, Servo architecture and
+programming, Remote control of robot from Windows, Mac or Smart Phone platforms, Programming of robot to carry out
+assigned tasks.
+Prerequisite(s): 
+CPSC 4121
+ with a minimum grade of C
+Restriction(s):
+Freshman students may 
+not
+ enroll.
+CPSC 4125
+ 
+Server-Side Web Development
+ 
+(3-0-3)
+ 
+This course is a continuation of 
+CPSC 2125
+. Topics include: server-side scripting languages, interfacing web applications
+with databases, advanced topics in hypertext markup languages and client-side scripting. Modern software tools for the
+server-side web application development will be introduced. Students will develop a functional web site that makes use of
+database connectivity.
+Prerequisite(s): 
+(
+CPSC 2125
+ with a minimum grade of C and 
+CPSC 3131
+ with a minimum grade of C)
+CPSC 4126
+ 
+Web Development Projects
+ 
+(3-0-3)
+ 
+This course is a continuation of 
+CPSC 4125
+, Introduction to Server-Side Web Development. This is a project-based class.
+Teams consisting of 3-4 students will develop working prototypes of large-scale web applications. Teams and their
+individual members will be required to make presentations reflecting progress through each stage of the project
+development: task formulation, analysis, prototyping and design, coding, debugging and testing. The final report will
+include a demonstration of the fully functional project.
+Prerequisite(s): 
+CPSC 4125
+ with a minimum grade of C
+CPSC 4127
+ 
+Computer and Network Security
+ 
+(3-0-3)
+ 
+This course is a basic introduction to the issues of software security with a focus on raising the students' awareness of the
+difficulties of maintaining a secure software environment. It reviews traditional security techniques and discusses the
+vulnerabilities of such methods. The course emphasizes well-written software as a prerequisite to network security and
+highlights security implications of common programming mistakes.
+Prerequisite(s): 
+(
+CYBR 2160
+ with a minimum grade of C or CYBR 2106 with a minimum grade of C) and (
+CYBR 2159
+ with
+a minimum grade of C or 
+MISM 3145
+ with a minimum grade of C)
+CPSC 4130
+ 
+Mobile Computing
+ 
+(3-0-3)
+ 
+This course introduces students to mobile computing and mobile application development. The course presents an
+overview of various mobile computing applications, technologies and wireless communication. Additional topics include
+mobile application frameworks and development environments; mobile security; and mobile user interface, user experience
+and application development guidelines. Students will be expected to learn at least one mobile application development
+framework and use it to implement course assignments.
+Prerequisite(s): 
+CPSC 3175
+ with a minimum grade of C
+CPSC 4135
+ 
+Programming Languages
+ 
+(3-0-3)
+ 
+Emphasizes the run-time behavior of programs. Languages are studied from two points of view: (1) the fundamental
+elements of languages and their inclusion in commercially available systems; and, (2) the difference between
+implementations of common elements in languages.
+Prerequisite(s): 
+CPSC 3175
+ with a minimum grade of C
+CPSC 4138
+ 
+Advanced Database Systems
+ 
+(3-0-3)
+ 
+This course is intended for computer science students and professionals who have already acquired a basic background
+on databases. The objective of the course is to introduce the students to the most advanced concepts and recent issues in
+several areas of database technology, including the following: advanced database design and implementation, transaction
+management and concurrency control, distributed database management systems, object-oriented databases, client/server
+systems. The course includes lab work and individual database application projects.
+Prerequisite(s): 
+CPSC 3131
+ with a minimum grade of C
+CPSC 4145
+ 
+Computer Graphics
+ 
+(3-0-3)
+ 
+Introduction to the input, construction, storage, retrieval, manipulation, alternations, and analysis of computer graphics
+objects. Graphics computer hardware, graphics primitives, two-dimensional and three-dimensional viewing and
+transformations, basic modeling.
+Prerequisite(s): 
+CPSC 2108
+ with a minimum grade of C
+CPSC 4148
+ 
+Theory of Computation
+ 
+(3-0-3)
+ 
+This course provides an introduction to the theoretical foundations of computer science and formal models of
+computation. Topics will include basic set theory, a review of graph theory, formal languages, finite automata,
+computability, and undecidability. 
+Computational complexity will be introduced and intuitively described.
+Prerequisite(s): 
+CPSC 4115
+ with a minimum grade of C or CPSC 5115U with a minimum grade of C
+CPSC 4155
+ 
+Computer Architecture
+ 
+(3-0-3)
+ 
+This course introduces the fundamentals of computer architecture. It covers a wide range of computer hardware, system
+software and data concepts from a security perspective. The course starts with combinational and sequential logic and
+circuit simulations, and is then followed with FPGA, RFID, NFC, TPM and PUF technologies. The course also covers
+Instruction set architecture, RISC processors, pipelining, virtualization, networks, and cryptographic hardware. It is essential
+for computer science and security professionals to understand both hardware and software security solutions to survive in
+the workplace.
+Prerequisite(s): 
+CPSC 3121
+ with a minimum grade of C
+CPSC 4157
+ 
+Computer Networks
+ 
+(3-0-3)
+ 
+Local area networks, wide area networks, and internets. Protocols and the ISO Open Systems Interconnect reference model.
+Design, analysis, and performance evaluation. Emphasis on data link, network, and transport protocols.
+Prerequisite(s): 
+CPSC 2108
+ with a minimum grade of C
+CPSC 4175
+ 
+Software Engineering
+ 
+(3-0-3)
+ 
+In this course, students are introduced to the basic principles of software engineering. The course focuses on the issues,
+methods and tools applied at every phase of the iterative development life cycle spanning from the conception of the
+actual requirements, through the analysis, design, development, testing, deployment and maintenance of the software
+product. Other subjects include project management and quality assurance. Students must complete a significant software
+project.
+Prerequisite(s): 
+CPSC 3175
+ with a minimum grade of C
+CPSC 4176
+ 
+Senior Software Engineering Project
+ 
+(3-0-3)
+ 
+The course encompasses a practical application of knowledge and skills mastered in the Computer Science curriculum
+through the development of a significant project. Students will apply a software engineering methodology in a team
+environment to develop a complex real-world application with an external customer under the guidance of instructor. Team
+members are involved in all phases of the software development life cycle.
+Prerequisite(s): 
+CPSC 4175
+ with a minimum grade of C
+CPSC 4185
+ 
+Artificial Intelligence and Machine Learning
+ 
+(3-0-3)
+ 
+This course provides an introduction to the field of artificial intelligence with an emphasis on intelligent system
+methodologies for real-life problem solving. Topics are selected from the following: rule-based systems, search techniques,
+supervised and unsupervised machine learning, fuzzy systems, genetic algorithms, intelligent agents, game AI, natural
+language processing and computer vision.
+Prerequisite(s): 
+CPSC 2108
+ with a minimum grade of C
+CPSC 4205
+ 
+IT Senior Capstone
+ 
+(3-0-3)
+ 
+A capstone course for IT majors to be taken in their last semester, students will be expected to complete a final team
+project integrating the knowledge acquired in preceding IT courses. The project may be an approved industry project or one
+developed and designed by faculty of the IT program. Students will apply skills and knowledge including project
+management, system design and development, database design, system integration, leadership, team work, and
+communication skills.
+Restriction(s):
+Enrollment limited to Senior students.
+CPSC 4505
+ 
+Undergraduate Research
+ 
+(0-0-(1-6))
+ 
+Students work in conjunction with a faculty member to select a research topic, complete a written research proposal and
+execute a research plan. Students will prepare both written and oral presentations of their work and present their work at
+one or more local, regional or professional meetings, or submit their work for publication.
+Prerequisite(s): 
+CPSC 2108
+ with a minimum grade of C
+Repeatability: 
+Repeatable for credit up to 5 times or 6 hours.
+Restriction(s):
+Enrollment limited to students in the Department Prerequisite college.
+CPSC 4555
+ 
+Selected Topics in Computer Science
+ 
+(3-0-3)
+ 
+Study of topics of special interest in computer science, or directed experience in computer science by means of lecture,
+discussion, seminar, and research. May be taken for a maximum of nine hours.
+Repeatability: 
+Repeatable for credit up to 1 times or 6 hours.
+Restriction(s):
+Freshman, Sophomore or Junior students may 
+not
+ enroll.
+CPSC 4698
+ 
+Internship
+ 
+(0-0-(1-3))
+ 
+Prerequisite: Junior Standing. Work experience on an approved project supervised by a faculty member. May be repeated
+for a maximum of three credit hours. (S/U grading.)
+Repeatability: 
+Repeatable for credit up to 98 times or 3 hours.
+Restriction(s):
+Freshman or Sophomore students may 
+not
+ enroll.
+CPSC 4899
+ 
+Independent Study
+ 
+(3-0-3)
+ 
+Course project approved and supervised by a faculty member. May be taken only once for credit.
+Repeatability: 
+Repeatable for credit up to 2 times or 6 hours.
+Restriction(s):
+Freshman or Sophomore students may 
+not
+ enroll.
+CPSC 6000
+ 
+Graduate Exit Examination
+ 
+(0-0-0)
+ 
+This is a zero credit hour course that should be taken in the last semester prior to graduation. It is designed to prepare
+computer science students for graduation. (S/U grading).
+Restriction(s):
+Enrollment limited to students majoring in Comp Sci - Applied Computing, Computer Science/Non-Degree, Applied
+Computer Sci - On-Line or Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+Enrollment limited to students in a Master of Science degree.
+Enrollment limited to students in the Turner College of Business college.
+CPSC 6103
+ 
+Computer Science Principles for Teachers
+ 
+(3-0-3)
+ 
+This course introduces the AP Computer Science Principles (AP CSP) framework as well as tools and methods to teach
+such curriculum. Students will be exposed to the seven Computational Thinking Practices, the 6 big ideas as delineated by
+the framework, assessment methodology and tools to teach this curriculum. Topics include Computational Thinking
+practices, Creativity, Abstraction, Data and Information, Algorithms, Programming (using block-based programming
+languages), the Internet, and Global Impact.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6105
+ 
+Fundamental Principles of Computer Science
+ 
+(3-0-3)
+ 
+Overview of basic concepts in computer science ranging from computer hardware components, interconnection network
+structures and communication protocols, analysis of computer algorithms to software systems and applications. May not
+be applied to a graduate computer science degree program. Need a B or better to show proficiency.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6106
+ 
+Fundamentals of Computer Programming and Data Structures
+ 
+(3-0-3)
+ 
+Computer programming, declaration of variables, definition of abstract data types, data manipulation, conditional
+statements, loops, functions and routines, standard input/output control, file manipulation, object-oriented programming,
+and data structures. May not be applied to a graduate computer science degree program. Need a B or better to show
+proficiency.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6107
+ 
+Survey of Modeling and Simulation
+ 
+(3-0-3)
+ 
+This course introduces the discipline of Modeling and Simulation by surveying its paradigms and methodologies as well as
+important and related disciplines. The Monte Carlo, continuous, and discrete event simulations are introduced as a
+foundation. Topics include input data analysis, model development, verification and validation, output data analysis,
+animation, and design and analysis of experiments using simulation software. The course requires knowledge of Calculus
+and Statistics.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6109
+ 
+Algorithms Analysis and Design
+ 
+(3-0-3)
+ 
+The need for efficient algorithms arises in nearly every area of computer science. This course covers the modern theory of
+algorithms, focusing on the themes of efficient algorithms and intractable problems. The course introduces many of the
+techniques that apply broadly in the design of efficient algorithms, and studies their application in a wide range of
+application domains and computational models. Topics include Basic Data Structuring Problems, Recursion,
+Computational Complexity, Graph Algorithms, Greedy Algorithms, Dynamic Data Structures, Hashing, Approximation
+Algorithms, Linear programming, Parallel Algorithms and Novel Approaches to NP-Complete Problems. The course requires
+familiarity with Java Programming Language.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6114
+ 
+Fundamentals of Machine Learning
+ 
+(3-0-3)
+ 
+This course provides an introduction to machine learning using the Python programming language and libraries. Topics
+include data-focused Python, statistics and linear algebra for machine learning, supervised learning algorithms,
+unsupervised learning algorithms, semi-supervised learning algorithms, reinforcement learning algorithms, and learning
+theory topics including bias/variance tradeoffs, and VC theory.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6118
+ 
+Human-Computer Interface Development
+ 
+(3-0-3)
+ 
+This course introduces fundamentals of human-computer interfaces and concepts behind the implementation of computer
+interfaces using intelligent systems and artificial intelligence techniques. Topics include an introduction to human
+computer interaction, conversational agents, voice-based interfaces, and sensor-based interfaces.
+Prerequisite(s): 
+CPSC 6114
+ with a minimum grade of C
+Restriction(s):
+Enrollment limited to students majoring in Cybersecurity Management or Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6119
+ 
+Object-Oriented Development
+ 
+(3-0-3)
+ 
+This course teaches object-oriented developing techniques and how to create advanced applications using classes,
+components, and objects. Fundamentals of developing client applications that include database access using server-level
+components. Topics include creating and managing objects, creating data services, testing, deploying and maintaining a
+component based solution.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6124
+ 
+Advanced Machine Learning
+ 
+(3-0-3)
+ 
+This course introduces the student to advanced machine learning methods such as deep learning methods and their
+applications. Topics include Deep Neural Networks (DNNs), Convolutional Neural Networks (CNNs), Recurrent Neural
+Networks (RNNs), Long Short-term Memory (LSTMs) architectures, Generative Adversarial Networks (GANs), Boltzman
+Machines, DNNs deployment, adversarial machine learning and ethics in ML systems.
+Prerequisite(s): 
+CPSC 6114
+ with a minimum grade of C
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6125
+ 
+Operating Systems Design and Implementation
+ 
+(3-0-3)
+ 
+This course provides an overview of the issues in the design and functioning of operating systems, including the
+synchronization of concurrent activity in both centralized and distributed systems. This course’s main topics are deadlocks,
+scheduling, performance analysis, operation system design, and memory systems including distributed file systems.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6126
+ 
+Introduction to Cybersecurity
+ 
+(3-0-3)
+ 
+This course focuses on the protection of information systems against cyber threats whether data is in transit, at rest, or in
+processing. Topics include an overview of cyber threats, measures necessary to detect, assess, and counter such threats,
+network security basics, symmetric and public key encryption, basic cryptologic analysis, access control, authentication,
+malware, vulnerability assessment, digital forensics, security policies, privacy, and ethics. This course builds knowledge,
+skills and abilities (KSAs) of principles and practices in cybersecurity.
+Restriction(s):
+Enrollment limited to students majoring in Cybersecurity Management, Applied Computer Science or Cybersecurity
+Management.
+Enrollment is limited to Graduate Level level students.
+CPSC 6127
+ 
+Contemporary Issues in Database Management Systems
+ 
+(3-0-3)
+ 
+This course provides an overview of modern database management systems and issues relating to these systems. Topics
+include developing a logical model, deriving the physical design, creating data services, creating a physical database, and
+maintaining a database in a variety of environments.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6128
+ 
+Network Security
+ 
+(3-0-3)
+ 
+This course examines the fundamentals of security issues arising from computer networks. Topics include intrusion
+detection, firewalls, threats and vulnerabilities, denial of service attacks, viruses and worms, use and effectiveness of
+encryption, secure transactions and e-commerce, and network exploits.
+Prerequisite(s): 
+CPSC 6126
+ with a minimum grade of C
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+CPSC 6129
+ 
+Computer Language Design and Interpretation
+ 
+(3-0-3)
+ 
+Working knowledge of data structures and discrete mathematics or permission of instructor. A study of the principles,
+concepts, and mechanisms of computer programming languages-their syntax, semantics, and pragmatics; the processing
+and interpretation of computer programs; programming paradigms; and language design. Additional topics will include
+language design principles and models of language implementation.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6136
+ 
+Human Aspects of Cybersecurity
+ 
+(3-0-3)
+ 
+This course examines the human behavioral and psychological aspects that create a complex system of cybercrimes and
+ethical and moral violations in the Internet. Students analyze various cybercrimes and cyber incidents that impact human
+life, and discuss how the human factor can be controlled or manipulated in order to create a more secure cyberspace.
+Prerequisite(s): 
+CPSC 6126
+ with a minimum grade of C
+Restriction(s):
+Enrollment limited to students majoring in Cybersecurity Management or Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6138
+ 
+Mobile Systems and Applications
+ 
+(3-0-3)
+ 
+This course explores the post-desktop model of computing that makes use of mobile systems. Topics include wireless
+communication protocols, mobile data and power management, context awareness, privacy and security, mobile gaming,
+and the mobile application development process.
+Prerequisite(s): 
+CPSC 6119
+ with a minimum grade of C
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6147
+ 
+Data Visualization and Presentation
+ 
+(3-0-3)
+ 
+This course introduces the principles of computer-based visualization including data representation, scalar, and vector
+visualization as well as image, volume and information visualization. The large amount of data that is generated in
+modern systems offers an opportunity to use computer-based visualization for analysis. Students will create their own
+data visualizations and learn how to use data visualization tools.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6155
+ 
+Advanced Computer Architecture
+ 
+(3-0-3)
+ 
+Working knowledge of data structures and discrete mathematics or permission of instructor. A comparative study of the
+architecture and organization of several types of computers currently in production. 
+Issues in the design of the ISA
+(Instruction Set Architecture) and the control units used to implement them, including cost and performance trade-offs.
+Study of methods currently in use to improve CPU performance. 
+Some attention will be paid to super-computers, parallel-
+execution engines, and other high-performance units.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6157
+ 
+Network and Cloud Management
+ 
+(3-0-3)
+ 
+This course is specifically designed to focus on the protocols, skills and tools needed to support the development and
+delivery of advanced network and cloud services over the Internet. This graduate-level course is also focused on mastering
+technical details in a number of areas of advanced networking through reading and hands-on activities of important
+research topics in the field. The topics covered in this course include 1) network and cloud basics; 2) protocols; 3) network
+and cloud security; 4) mobile computing; 5) software-defined networking; 6) network and cloud management; 7) data
+center management; 8) big data analytics and cloud.
+Restriction(s):
+Enrollment limited to students majoring in Cybersecurity Management or Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6159
+ 
+Digital Forensics
+ 
+(3-0-3)
+ 
+The course focuses on the role of computer forensics and the methods used in the investigation of computer crimes. The
+course explains the need for proper investigation and illustrates the process of locating, handling, and processing computer
+evidence.
+Prerequisite(s): 
+CPSC 6126
+ with a minimum grade of C
+Restriction(s):
+Enrollment limited to students majoring in Cybersecurity Management or Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6167
+ 
+Cybersecurity Risk Management
+ 
+(3-0-3)
+ 
+This course focuses on the risk analysis component of cybersecurity management. It provides detailed coverage of
+contemporary frameworks and processes related to managing risk. 
+Also, it involves enumerating organization's resources
+and prioritizing their protection based on probability of threat and subsequent damage. Reporting security breaches to
+management, and providing steps to mitigate threats and implement future controls will be an integral part of this course.
+Prerequisite(s): 
+CPSC 6126
+ with a minimum grade of C
+Restriction(s):
+Enrollment limited to students majoring in Cybersecurity Management or Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6175
+ 
+Web Engineering and Technologies
+ 
+(3-0-3)
+ 
+This course teaches the fundamentals of Web technologies and Web site development. This course covers many open
+technologies including XML and its related standards.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6177
+ 
+Software Design and Development
+ 
+(3-0-3)
+ 
+Examines software requirements and design methodologies. Studies defining software requirements: interacting with end-
+users to determine system requirements and identifying functional, performance, and other requirements. Examines
+techniques to support requirements including prototyping, modeling, and simulation; the relation of requirements to design;
+design in the system life cycle; and hardware versus software trade-offs. Discusses subsystem definition and design and
+covers principles of design, including abstraction, information hiding, modularity, and reuse. Uses examples of design
+paradigms.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6178
+ 
+Software Testing and Quality Assurance
+ 
+(3-0-3)
+ 
+This course examines the relationship between software testing and quality assurance with an emphasis on the role of
+testing in the software development life cycle. It covers commonly used software testing strategies and test design
+techniques. The issues of test management, test support tools, and automated testing are also discussed.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6179
+ 
+Software Project Planning and Management
+ 
+(3-0-3)
+ 
+Centers on the concept of a software engineering process and includes discussion of life-cycle models for software
+development. Addresses issues associated with the successful management of software development including planning,
+scheduling, tracking, cost and size, estimating, risk management, configuration, management quality, and engineering and
+process improvement. Includes the SEI software process Capability Maturity Model (CMM) and other process standards.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6180
+ 
+Software Estimation and Measurement
+ 
+(3-0-3)
+ 
+Study of software measurement and estimation with an introduction to financial measurements. Students will learn to
+measure and predict the size, complexity, and quality of software development projects by a variety of methods.
+Commercially available tools are used, as well as engineering rules, benchmarks, and a variety of predictive/estimation
+methodologies. Topics include but are not limited to: Develop estimates for software development and maintenance
+projects, how to communicate the estimates to others, and how to best represent the estimates in a formal contract,
+cognitive biases and administrative behaviors that affect the estimation process, use of parametric models and counting
+methods, Delphi, paired comparisons, functional sizing methods, quantifying and incorporating uncertainty, cost behaviors,
+cost objects, fixed, variable, mixed & step costs, calculating total budget, how measurement is used, applying software
+measurement, s/w measurement definition, process definition techniques, measuring quality, measurement and CMM,
+performance management measurement, statistical process control etc.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6185
+ 
+Intelligent Systems
+ 
+(3-0-3)
+ 
+This course introduces students to the field of Artificial Intelligence (AI) with emphasis on its use to solve real world
+problems for which solutions are difficult to express using the traditional algorithmic approach. It explores the essential
+theory behind methodologies for developing systems that demonstrate intelligent behavior including dealing with
+uncertainty, learning from experience and following problem solving strategies found in nature.
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6190
+ 
+Applied Cryptography
+ 
+(3-0-3)
+ 
+This course features a rigorous introduction to modern cryptography, with an emphasis on the fundamental cryptographic
+primitives of symmetric and public-key encryption, basic cryptanalysis, hash functions, and digital signatures. This course
+requires familiarity with discrete mathematics and algorithm analysis.
+Prerequisite(s): 
+CPSC 6106
+ with a minimum grade of B
+Restriction(s):
+Enrollment is limited to Graduate Level level students.
+CPSC 6555
+ 
+Selected Topics in Computer Science
+ 
+(3-0-3)
+ 
+This course covers topics of special interest in the field of computing. May be repeated for credit.
+Repeatability: 
+Repeatable for credit up to 1 times or 6 hours.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6698
+ 
+Graduate Internship in Computer Science
+ 
+(0-15-3)
+ 
+Prerequisites: Unconditional admission to the Computer Science graduate program, full-time student with an overall GPA of
+3.0. This course provides an opportunity to graduate students to apply knowledge gained in academic courses to the real
+world. Internships serve the dual purposes of developing hands-on technical skills and interpersonal skills for the student.
+In addition to being remunerated by the place at which the internship is conducted, the student also obtains course credit.
+Work undertaken during an internship must be relevant to the student's course of study. May be repeated once for credit.
+Repeatability: 
+Repeatable for credit up to 1 times or 6 hours.
+Restriction(s):
+Enrollment limited to students majoring in Comp Sci - Applied Computing, Computer Science/Non-Degree or Applied
+Computer Sci - On-Line.
+Enrollment is limited to Graduate Level level students.
+Enrollment limited to students in a Master of Science degree.
+CPSC 6899
+ 
+Independent Study
+ 
+(0-0-3)
+ 
+This is a project-based course. The project has to be approved and supervised by an appropriate member of the graduate
+faculty. May be taken twice for credit.
+Repeatability: 
+Repeatable for credit up to 1 times or 6 hours.
+Restriction(s):
+Enrollment limited to students majoring in Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6985
+ 
+Research and Thesis
+ 
+(0-0-(1-4))
+ 
+This course is required by all students completing the thesis option of the MS in Applied Computer Science. It involves
+completion of a research project and defense of the project thesis in adherence to the School of Computer Science MS
+thesis policy. The project is to be designed in consultation with a thesis advisor who is a member of the graduate faculty of
+the School of Computer Science. The course must be taken at least twice for a minimum total of four credit hours. The
+exact number of credit hours taken each semester is to be decided in consultation with the thesis advisor. (S/U grading)
+Repeatability: 
+Repeatable for credit up to 1 times or 4 hours.
+Restriction(s):
+Enrollment limited to students majoring in Cybersecurity Management or Applied Computer Science.
+Enrollment is limited to Graduate Level level students.
+CPSC 6986
+ 
+Thesis Defense
+ 
+(0-0-0)
+ 
+Department approval is required for this course. A satisfactory grade in the course indicates a successful oral defense of
+the thesis, the completion of edits and approval by the advisor or committee, and submission to the library. Degree
+candidates must be enrolled during the semester of their defense. S/U grading.
+Repeatability: 
+Repeatable for credit up to 2 times or 0 hours.
+Restriction(s):
+Enrollment limited to students in the Department Prerequisite college.
+Columbus State University
+4225 University Avenue
+Columbus, Georgia 31907
+Phone:706-507-8800
+Toll-free: 1-866-264-2035
+
+ 
+
+ 
+
+ 
+
+ 
+
+Audiences
+Students
+Faculty/Staff
+Alumni
+Parents
+Military
+Employment
+Main
+Academics
+Admissions
+Tuition & Fees
+About Us
+Student Life
+Athletics
+Contact
+Contact Us
+Search
+Maps
+Tour Campus
+University Police
+Tools & Info
+MyCSU
+CougarView
+IT HelpDesk
+Privacy Policy
+Human Trafficking Notice
+©2019 
+Columbus State University
+706-507-8800
+Toll-free: 1-866-264-2035
+4225 University Avenue
+Columbus, Georgia 31907
+University System of Georgia Institution

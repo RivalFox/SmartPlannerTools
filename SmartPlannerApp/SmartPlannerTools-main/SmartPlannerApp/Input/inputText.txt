@@ -1,0 +1,32 @@
+AREA E: SOCIAL SCIENCES
+American Government Still Needed:
+ 1 Class in POLS 1101
+AREA G: PROGRAM REQ
+Remark:     C or better required in each CPSC course. 
+Professionalism in Computing Still Needed:
+ 1 Class in CPSC 3165*
+Baccalaureate Survey Still Needed:
+ 1 Class in CPSC 4000
+AREA H: TRACK REQ
+Remark:     C or better required in each course 
+Assembly Language Programing 1 Still Needed:
+ 1 Class in CPSC 3121*
+CPSC 4115 Algorithms Still Needed:
+ 1 Class in CPSC 5115U*
+Programming Languages Still Needed:
+ 1 Class in CPSC 4135* or 5135U*
+Theory of Computation Still Needed:
+ 1 Class in CPSC 4148* or 5128U*
+Computer Architecture Still Needed:
+ 1 Class in CPSC 4155* or 5155U*
+Computer Networks Still Needed:
+ 1 Class in CPSC 4157* or 5157U*
+Software Engineering Still Needed:
+ 1 Class in CPSC 4175*
+Senior Software Engineering Project Still Needed:
+ 1 Class in CPSC 4176*
+Computer Science Electives Still Needed:
+ 6 Credits in CPSC 3@ or 4@ or 5@ or CYBR 3@ or 4@ or 5@
+Mathematics Electives Still Needed:
+9 Credits in MATH 3@ or 4@ or 5@U or DSCI 3111* or
+STAT 3127*
