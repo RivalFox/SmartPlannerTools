@@ -1,7 +1,8 @@
 InputDict = {}
+Schedule = []
     
 def analyzeData(path, filename, database):
-    global InputDict
+    global InputDict, Schedule
     # Open and Read File
     inputFile = open(path + "\\" + filename)
     DatabaseDict = database
@@ -29,25 +30,48 @@ def analyzeData(path, filename, database):
                          InputDict[className]["Name"] = className
                          #Dictionary[word + " " + num[:4]]["Name"] = {}
 
-
-    #print(classList)
     for key, value in DatabaseDict.items():
         t = InputDict.get(key)
         if t != None:
             InputDict[key] = value
-        #else:
-            #print("")
+        else:
+            continue
 
-    List = []
+    Temp = []
     for key, value in InputDict.items():
         if InputDict[key].get("Credits") == None:
-            List.append(key)
-        print(key, ":", value)
+            Temp.append(key)
+        else:
+            continue
 
-    for i in range(len(List)):
-        InputDict.pop(List[i])
-        print(List[i], " has been popped")
+    for i in range(len(Temp)):
+        InputDict.pop(Temp[i])
 
+    Schedule = []
+    InputList = []
+    for key, value in InputDict.items():
+        InputList.append(InputDict.get(key).get("Name"))
+        Schedule.append(InputDict.get(key).get("Name"))
 
-def getInputDatabase():
+    Schedule.sort(key = lambda x: int("".join([i for i in x if i.isdigit()])))
+
+    for x in range(len(InputList)):
+        if InputDict[InputList[x]].get("Prerequisite") == None:
+            continue
+        else:
+            for key, value in InputDict[InputList[x]]["Prerequisite"].items():
+                if key in Schedule:
+                    index = Schedule.index(key)
+                    Schedule.remove(InputList[x])
+                    Schedule.insert(index+1, InputList[x])
+
+    for x in range(len(Schedule)):
+        if "000" in InputList[x]:
+            Schedule.append(InputList[x])
+            Schedule.remove(InputList[x])
+
+def getInputDict():
     return InputDict
+
+def getScheduleList():
+    return Schedule

@@ -6,6 +6,8 @@ import PyPDF2
 #To save the prerequisite info
 import networkx as nx
 
+InputDict = {}
+
 def extractData(path, input):
 	extractedInput =[]
 	#Sample Input            

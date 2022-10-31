@@ -1,4 +1,4 @@
-from Analyzer import analyzeData, getInputDatabase
+from Analyzer import analyzeData, getInputDict, getScheduleList
 from Compiler import compileData
 from Extractor import extractData, getInputFileName
 from ArgumentParser import argParser, getPath, getInput, getPathName
@@ -23,7 +23,7 @@ def main():
 	#extractHTML()
 	#setDatabase(getDictionary())
 	analyzeData(getPathName(), getInputFileName(), getDatabase())
-	compileData(getInputDatabase())
+	compileData(getScheduleList(), getInputDict())
 
 if __name__ == "__main__":
 	main()

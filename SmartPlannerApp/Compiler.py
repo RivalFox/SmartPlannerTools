@@ -3,15 +3,12 @@ import openpyxl
 import os
 import sys
 
-def compileData(InputDict):
-    InputList = []
-    for key, value in InputDict.items():
-        InputList.append(InputDict.get(key).get("Name"))
+def compileData(InputList, InputDict):
 
     filePath = os.path.join(os.path.dirname(__file__), 'ExcelFiles')
     os.chdir(filePath)
     excelFiles = os.listdir('.')
-    for i in range(0, len(excelFiles)):
+    for i in range(0, len(excelFiles)): 
         wb = openpyxl.load_workbook(excelFiles[i])
         sheet = wb.active
         row = 4
