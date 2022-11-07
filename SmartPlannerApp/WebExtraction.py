@@ -135,13 +135,6 @@ def extractHTML():
 		  "https://catalog.columbusstate.edu/course-descriptions/wmba/"]
 	#'''
 
-	#links = ["https://catalog.columbusstate.edu/course-descriptions/wbit/"]
-
-	#fta
-	#gfa
-	#mba
-	#mph
-
 	for url in links:
 		list = []
 		list.clear()
@@ -244,6 +237,7 @@ def check(num, string):
 	else:
 		return False
 '''
+
 def addtoName(key, string):
 	DatabaseDict[key] = {}
 	DatabaseDict[key]["Name"] = string

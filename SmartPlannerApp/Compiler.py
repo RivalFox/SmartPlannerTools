@@ -1,41 +1,58 @@
-from operator import contains
-import openpyxl
-import os
+from heapq import merge
+import xlsxwriter
 import sys
+import datetime
 
 def compileData(InputList, InputDict):
 
-    filePath = os.path.join(os.path.dirname(__file__), 'ExcelFiles')
-    os.chdir(filePath)
-    excelFiles = os.listdir('.')
-    for i in range(0, len(excelFiles)): 
-        wb = openpyxl.load_workbook(excelFiles[i])
-        sheet = wb.active
-        row = 4
-        for j, classes in enumerate(InputList[0:4]):
-            sheet.cell(column=1, row=row, value=InputDict.get(classes).get("Name"))
-            sheet.cell(column=2, row=row, value=int(InputDict.get(classes).get("Credits")))
-            row += 1
+    Schedules = []
+    Schedules.append(InputList)
 
-        row = 4
-        for j, classes in enumerate(InputList[4:8]):
-            sheet.cell(column=3, row=row, value=InputDict.get(classes).get("Name"))
-            sheet.cell(column=4, row=row, value=int(InputDict.get(classes).get("Credits")))
-            row += 1
+    today = datetime.date.today()
+    credits = 0
+    creditLimit = 15
+    i = 4
+    r = 2
+    tempr = r
+    year = today.year
 
-        row = 4
-        for j, classes in enumerate(InputList[8:10]):
-            sheet.cell(column=5, row=row, value=InputDict.get(classes).get("Name"))
-            sheet.cell(column=6, row=row, value=int(InputDict.get(classes).get("Credits")))
-            row += 1        
-                    
-        row = 13
-        for j, classes in enumerate(InputList[10:11]):
-            sheet.cell(column=1, row=row, value=InputDict.get(classes).get("Name"))
-            sheet.cell(column=2, row=row, value=int(InputDict.get(classes).get("Credits")))
-            row += 1  
+    for x in range(len(Schedules)):
+        workbook = xlsxwriter.Workbook(".\ExcelFiles\Path to Graduation " + str(x + 1) + ".xlsx")
+        worksheet = workbook.add_worksheet("firstSheet")
+        ptg_format = workbook.add_format({'bold': True, 'align': 'center', 'font_size': 50})
+        worksheet.write(0, 3, "Billy Bob")
+        worksheet.write(0, 4, "909909909")
+        worksheet.merge_range(1, 0, 1, 5, "Path To Graduation", ptg_format)
+        for x in range(i):
+            worksheet.write(r, 0, "Fall " + str(year))
+            worksheet.write(r, 1, "Credits")
+            worksheet.write(r, 2, "Spring " + str(year))
+            worksheet.write(r, 3, "Credits")
+            worksheet.write(r, 4, "Summer " + str(year))
+            worksheet.write(r, 5, "Credits")
+            r += 8
+            worksheet.write(r, 0, "Total")
+            worksheet.write_formula(r, 1, '=SUM(B' + str(r-6) + ':B' + str(r) + ')')
+            worksheet.write(r, 2, "Total")
+            worksheet.write_formula(r, 3, '=SUM(D' + str(r-6) + ':D' + str(r) + ')')
+            worksheet.write(r, 4, "Total")
+            worksheet.write_formula(r, 5, '=SUM(F' + str(r-6) + ':F' + str(r) + ')')
+            r += 1
+            year +=1
 
-        wb.save(excelFiles[i])
-        print(excelFiles[i] + ' completed.')
+        worksheet.set_column(0, 2, 25)
+        worksheet.set_column(0, 4, 25)
+        worksheet.set_column('A:A', 25)
+        worksheet.set_column('C:C', 25)
+        worksheet.set_column('E:E', 25)
+
+        credits = 0
+        creditLimit = 15
+        i = 4
+        r = 2
+        tempr = r
+        year = 2022
+
+        workbook.close()
 
     sys.exit()

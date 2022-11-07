@@ -20,6 +20,13 @@ def main():
 		Database = pickle.load(f)
 	setDatabase(Database)
 
+	list = ["FINC", "CPSC", "GEOL"]
+	for key, value in Database.items():
+		if key[0:4] in list:
+			print(key, ":", value)
+
+
+
 	#extractHTML()
 	#setDatabase(getDictionary())
 	analyzeData(getPathName(), getInputFileName(), getDatabase())
