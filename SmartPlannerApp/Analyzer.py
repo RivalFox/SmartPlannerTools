@@ -29,6 +29,16 @@ def analyzeData(path, filename, database):
                          InputDict[className] = {}
                          InputDict[className]["Name"] = className
                          #Dictionary[word + " " + num[:4]]["Name"] = {}
+    '''
+    InputDict["CPSC 1302"] = {}
+    InputDict["CPSC 1302"]["Name"] = "CPSC 1302"
+    InputDict["CPSC 1301K"] = {} 
+    InputDict["CPSC 1301K"]["Name"] = "CPSC 1301K"
+    InputDict["CPSC 2108"] = {}
+    InputDict["CPSC 2108"]["Name"] = "CPSC 2108"
+    InputDict["CPSC 4115"] = {}
+    InputDict["CPSC 4115"]["Name"] = "CPSC 4115"
+    '''
 
     for key, value in DatabaseDict.items():
         t = InputDict.get(key)

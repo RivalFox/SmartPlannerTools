@@ -15,13 +15,15 @@ def main():
 	cpscList = {}
 	argParser()
 	extractData(getPath(), getInput())
+	#extractHTML()
+	#setDatabase(getDictionary())
 
 	with open('.\Input\saved_dictionary.pkl', 'rb') as f:
 		Database = pickle.load(f)
+
+	#setDatabase(getDictionary())
 	setDatabase(Database)
 
-	#extractHTML()
-	#setDatabase(getDictionary())
 	analyzeData(getPathName(), getInputFileName(), getDatabase())
 	compileData(getScheduleList(), getInputDict())
 

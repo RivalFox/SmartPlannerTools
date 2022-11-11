@@ -135,13 +135,6 @@ def extractHTML():
 		  "https://catalog.columbusstate.edu/course-descriptions/wmba/"]
 	#'''
 
-	#links = ["https://catalog.columbusstate.edu/course-descriptions/wbit/"]
-
-	#fta
-	#gfa
-	#mba
-	#mph
-
 	for url in links:
 		list = []
 		list.clear()
@@ -179,7 +172,8 @@ def extractHTML():
 							for l in range(len(tempList)):
 				#				print(tempList[l])
 				#				print("added to prerequisite")
-								addtoPrerequisite(temp, tempList[l])
+								if tempList[-1] != tempList[l]:
+									addtoPrerequisite(temp, tempList[l])
 							if prereq == True:
 								tempNew = tempList[-1]
 				#				print(tempNew)
@@ -233,17 +227,6 @@ def prereqMode(string):
 def loopChange(string):
 	return SwitchLoopDict.get(string, False)
 
-'''
-def check(num, string):
-	if num == 0 and DatabaseDict.get(string) == None and string[-1] != "~" and string[5:9].isdigit() == True:
-		return True
-	elif num == 1 and DatabaseDict.get(string) == None and string[-1] != "~":
-		return True
-	elif num == 2 and DatabaseDict.get(string) == None and string[-1] != "~":
-		return True
-	else:
-		return False
-'''
 def addtoName(key, string):
 	DatabaseDict[key] = {}
 	DatabaseDict[key]["Name"] = string
