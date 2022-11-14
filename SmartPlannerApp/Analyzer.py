@@ -1,8 +1,9 @@
 InputDict = {}
 Schedule = []
+ScheduleList = []
     
 def analyzeData(path, filename, database):
-    global InputDict, Schedule
+    global InputDict, Schedule, ScheduleList
     # Open and Read File
     inputFile = open(path + "\\" + filename)
     DatabaseDict = database
@@ -29,7 +30,7 @@ def analyzeData(path, filename, database):
                          InputDict[className] = {}
                          InputDict[className]["Name"] = className
                          #Dictionary[word + " " + num[:4]]["Name"] = {}
-    '''
+    
     InputDict["CPSC 1302"] = {}
     InputDict["CPSC 1302"]["Name"] = "CPSC 1302"
     InputDict["CPSC 1301K"] = {} 
@@ -38,7 +39,27 @@ def analyzeData(path, filename, database):
     InputDict["CPSC 2108"]["Name"] = "CPSC 2108"
     InputDict["CPSC 4115"] = {}
     InputDict["CPSC 4115"]["Name"] = "CPSC 4115"
-    '''
+    InputDict["CPSC 4111"] = {}
+    InputDict["CPSC 4111"]["Name"] = "CPSC 4111"
+    InputDict["CPSC 6180"] = {}
+    InputDict["CPSC 6180"]["Name"] = "CPSC 6180"
+    InputDict["CPSC 6185"] = {}
+    InputDict["CPSC 6185"]["Name"] = "CPSC 6185"
+    InputDict["CPSC 6985"] = {}
+    InputDict["CPSC 6985"]["Name"] = "CPSC 6985"
+    InputDict["CYBR 2159"] = {}
+    InputDict["CYBR 2159"]["Name"] = "CYBR 2159"
+    InputDict["CYBR 2160"] = {}
+    InputDict["CYBR 2160"]["Name"] = "CYBR 2160"
+    InputDict["CYBR 3106"] = {}
+    InputDict["CYBR 3106"]["Name"] = "CYBR 3106"
+    InputDict["CYBR 3108"] = {}
+    InputDict["CYBR 3108"]["Name"] = "CYBR 3108"
+    InputDict["CYBR 3115"] = {}
+    InputDict["CYBR 3115"]["Name"] = "CYBR 3115"
+    InputDict["CYBR 3119"] = {}
+    InputDict["CYBR 3119"]["Name"] = "CYBR 3119"
+    
 
     for key, value in DatabaseDict.items():
         t = InputDict.get(key)
@@ -80,8 +101,10 @@ def analyzeData(path, filename, database):
             Schedule.append(InputList[x])
             Schedule.remove(InputList[x])
 
+    ScheduleList.append(Schedule)
+
 def getInputDict():
     return InputDict
 
 def getScheduleList():
-    return Schedule
+    return ScheduleList
