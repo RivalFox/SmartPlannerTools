@@ -7,6 +7,7 @@ import re
 Semesters = ["Fall", "Spring", "Summer"]
 CourseCells = ["A", "C", "E"]
 CreditCells = ["B", "D", "F"]
+
 row = 3
 column = 0
 i = 4
@@ -21,15 +22,26 @@ ScheduleDict = {}
 Schedules = []
 InputDict = {}
 
-def compileData(InputList, InputDict1):
+def compileData(InputList, InputDict1, name, id, crHrs):
     global InputDict, ScheduleDict
 
     InputDict = InputDict1
 
     Schedules = InputList
 
-    creditLimit = 15
-    summerCreditLimit = 9
+    if crHrs == "Full-time":
+        creditLimit = 15
+        summerCreditLimit = 9
+    if crHrs == "Three quarter-time":
+        creditLimit = 12
+        summerCreditLimit = 6
+    if crHrs == "Half-time":
+        creditLimit = 9
+        summerCreditLimit = 6
+    if crHrs == "Less than half-time":
+        creditLimit = 6
+        summerCreditLimit = 3
+
 
     i = 1
 
@@ -39,8 +51,8 @@ def compileData(InputList, InputDict1):
 
         ptg_format = workbook.add_format({'bold': True, 'align': 'center', 'font_size': 50})
 
-        worksheet.write(0, 3, "Billy Bob")
-        worksheet.write(0, 4, "909909909")
+        worksheet.write(0, 2, name)
+        worksheet.write(0, 4, id)
         worksheet.merge_range(1, 0, 1, 5, "Path To Graduation", ptg_format)
 
         row = 3
@@ -48,7 +60,6 @@ def compileData(InputList, InputDict1):
 
         addSemesters(i, worksheet)
 
-        print("-----------------------")
         for f in range(len(Schedules[x])):
             Fall = InputDict[Schedules[x][f]]["Semester"].get("Fall")
             Spring = InputDict[Schedules[x][f]]["Semester"].get("Spring")
@@ -58,10 +69,10 @@ def compileData(InputList, InputDict1):
                 break
             addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, Schedules[x][f], worksheet)
 
-        print("------------------------")
-
+        '''
         for key1, value1 in ScheduleDict.items():
             print(key1, ":", value1)
+        '''
 
         worksheet.set_column(0, 2, 25)
         worksheet.set_column(0, 4, 25)  

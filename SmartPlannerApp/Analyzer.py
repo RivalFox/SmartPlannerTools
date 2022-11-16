@@ -1,11 +1,13 @@
+import os
+
 InputDict = {}
 Schedule = []
 ScheduleList = []
     
-def analyzeData(path, filename, database):
+def analyzeData(filename, database):
     global InputDict, Schedule, ScheduleList
     # Open and Read File
-    inputFile = open(path + "\\" + filename)
+    inputFile = open(os.path.join(".\Input", filename))
     DatabaseDict = database
     InputDict = {}
     #classList = []

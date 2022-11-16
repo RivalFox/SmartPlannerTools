@@ -1,11 +1,15 @@
 import os
+import pickle
 
 DatabaseDict = {}
 
-def setDatabase(dictionary):
+def setDatabase():
     global DatabaseDict
-    DatabaseDict = dictionary
-            
+    
+    with open('.\Database\saved_dictionary.pkl', 'rb') as f:
+        Database = pickle.load(f)
 
+    DatabaseDict = Database
+            
 def getDatabase():
     return DatabaseDict
