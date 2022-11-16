@@ -69,10 +69,10 @@ def compileData(InputList, InputDict1, name, id, crHrs):
                 break
             addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, Schedules[x][f], worksheet)
 
-        '''
+        
         for key1, value1 in ScheduleDict.items():
             print(key1, ":", value1)
-        '''
+        
 
         worksheet.set_column(0, 2, 25)
         worksheet.set_column(0, 4, 25)  
