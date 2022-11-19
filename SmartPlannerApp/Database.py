@@ -2,21 +2,17 @@ import os
 import pickle
 import sys
 
-DatabaseDict = {}
 
-def setDatabase():
-    global DatabaseDict
+def getDatabase():
 
-    if os.path.isfile('.\Database\saved_dictionary.pkl') == False:
+    if os.path.isfile('.\Database\database.pkl') == False:
         print("##########################################################################################################")
-        print("saved_dictionary.pkl is missing from Database folder, run WebExtraction.py to generate saved_dictionary.pk")
+        print("database.pkl is missing from Database folder, run WebExtraction.py to generate database.pk")
+        print("Webextraction.py is located in " + os.path.abspath(__file__).strip("Database.py") + "Database")
         print("##########################################################################################################")
         sys.exit()
     
-    with open('.\Database\saved_dictionary.pkl', 'rb') as f:
-        Database = pickle.load(f)
+    with open('.\Database\database.pkl', 'rb') as f:
+        database = pickle.load(f)
 
-    DatabaseDict = Database
-            
-def getDatabase():
-    return DatabaseDict
+    return database

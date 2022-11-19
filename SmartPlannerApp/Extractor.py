@@ -4,11 +4,8 @@ import os
 #To read a pdf input file
 import PyPDF2
 
-classList = []
-
-def extractData(path):
-	extractedInput =[]
-	#Sample Input            
+def extractData(path):	
+	extractedInput =[]         
 	#Open file and read file
 	inputFile = open(os.path.join(os.path.split(path)[0], os.path.split(path)[1]), "rb")	
 	reader = PyPDF2.PdfFileReader(inputFile)
@@ -24,21 +21,21 @@ def extractData(path):
 	txtFile.writelines(contents)
 	txtFile.close()
 	inputFile.close()
-	createList(".\Input","inputText.txt")
+
+	return createList(".\Input","inputText.txt")
 
 
 def createList(path, filename):
-	inputFile1 = open(os.path.join(path, filename))
-
-	line = ""
-
+	classList = []
+	classes = []
+	classes2 = []
+	inputFile = open(os.path.join(path, filename))
 	phrase = "Needed"
-		#count = 0
-	for line in inputFile1:
+	for line in inputFile:
 		#Finds the line that contains the phrase "Needed"
 		if line.find(phrase) != -1: 
 			#Once found, moves onto the next line
-			nextLine = next(inputFile1)
+			nextLine = next(inputFile)
 
 			for word in nextLine.split():
 
@@ -48,12 +45,26 @@ def createList(path, filename):
 					for num in nextLine.split():
 						if num[0].isdigit() and len(num) > 3:
 							#print(word + " " + num[:4])
-							classList.append(word + " " + num[:4])
-	
-	print(classList)
-	
+							classes.append(word + " " + num[:4])
 
-	inputFile1.close()
+	inputFile.close()
 
-def getClassList():
+	classList.append(classes)
+
+	classes2.append("CPSC 1302")
+	classes2.append("CPSC 1301K")
+	classes2.append("CPSC 2108")
+	classes2.append("CPSC 4115")
+	classes2.append("CPSC 4111")
+	classes2.append("CPSC 6180")
+	classes2.append("CPSC 6185")
+	classes2.append("CPSC 6985")
+	classes2.append("CYBR 2159")
+	classes2.append("CYBR 2160")
+	classes2.append("CYBR 3106")
+	classes2.append("CYBR 3108")
+	classes2.append("CYBR 3115")
+	classes2.append("CYBR 3119")
+	classList.append(classes2)
+
 	return classList

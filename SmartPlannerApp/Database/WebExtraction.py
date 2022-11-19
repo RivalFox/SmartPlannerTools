@@ -212,7 +212,7 @@ def extractHTML():
 				tempList.clear()
 				continue
 
-	with open('.\Database\saved_dictionary.pkl', 'wb') as f:
+	with open('.\Database\database.pkl', 'wb') as f:
 		pickle.dump(DatabaseDict, f)
 
 
