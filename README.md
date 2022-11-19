@@ -1,6 +1,23 @@
 # SmartPlannerTools
-
 This smart advising tool can output a recommended class plan for a student to follow until the student’s graduation based on the student’s career goal, program interests, expected graduation date, etc. 
+
+## Description
+
+
+## Getting Started
+
+
+### Dependencies
+
+
+### Installing
+-
+-
+
+### Executing program
+-
+1. Step by Step
+
 
 This software requires three inputs to generate an output excel form where recommended classes for different semesters are listed. 
 
