@@ -54,7 +54,7 @@ def compileData(InputList, InputDict1, name, id, crHrs):
         row = 3
         column = 0
 
-        addSemesters(1, worksheet)
+        addSemesters(4, worksheet)
 
         for f in range(len(Schedules[x])):
             Fall = InputDict[Schedules[x][f]]["Semester"].get("Fall")
@@ -68,6 +68,7 @@ def compileData(InputList, InputDict1, name, id, crHrs):
         
         for key1, value1 in ScheduleDict.items():
             print(key1, ":", value1)
+        ScheduleDict.clear()
         print("-------------------------------------------------------")
         
 
@@ -121,12 +122,16 @@ def addSemesters(years, worksheet):
         year +=1
         column = 0
 
+    keyList.clear()
+
     for key, value in ScheduleDict.items():
         keyList.append(key)
 
 def addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, CourseName, worksheet):
 
     print(CourseName)
+    CourseNum = re.sub('[^0-9]','', CourseName)
+    print(CourseNum)
     tempList = []
     prereqList = []
     credits = 0
@@ -142,7 +147,6 @@ def addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, CourseName,
     addCourses = False
     addCredits = False
     addSemester = False
-    lastSemester = False
 
     if InputDict[CourseName].get("Prerequisite") != None:
         for key, value in InputDict[CourseName].get("Prerequisite").items():
@@ -150,44 +154,90 @@ def addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, CourseName,
 
     while loop:
 
-        for i in range(len(keyList)):
-            if Fall == True and keyList[i][0:4] == "Fall":
-                tempList.append(keyList[i])
-            if Spring == True and keyList[i][0:4] == "Spri":
-                tempList.append(keyList[i])
-            if Summer == True and keyList[i][0:4] == "Summ":
-                tempList.append(keyList[i])
-
-
+        for x in range(len(keyList)):
+            if Fall == True and keyList[x][0:4] == "Fall":
+                tempList.append(keyList[x])
+            if Spring == True and keyList[x][0:4] == "Spri":
+                tempList.append(keyList[x])
+            if Summer == True and keyList[x][0:4] == "Summ":
+                tempList.append(keyList[x])
+    
         for i in range(len(tempList)):
-            
+
             temp = tempList[i]
 
-            cs = ScheduleDict[temp].get("CreditStart")
-            cs = re.split('(\d+)', cs)
-            ce = ScheduleDict[temp].get("CreditEnd")
-            ce = re.split('(\d+)', ce)
+            
+            for k in range(len(prereqList)):
+                if prereqList[k] in addedList:
+                    loop2 = True
+                while loop2:
+                    print("loop2")
+                    if ScheduleDict[temp]["Courses"].get(prereqList[k]) == None:
+                        if 0 <= i+l and i+l < len(tempList):
+                            temp = tempList[i+l]
+                            addSemester = False
+                            l += 1
+                    elif ScheduleDict[temp]["Courses"].get(prereqList[k]) != None:
+                        if 0 <= i+l and i+l < len(tempList):
+                            temp = tempList[i+l]
+                            addSemester = False
+                            loop2 = False
+                        else:
+                            addSemester = True
+                            loop2 = False
+                if addSemester == True:
+                    addSemesters(1, worksheet)
+                    break
+
+            if addSemester == True:
+                addSemester = False
+                break
+            
+            '''
+            while int(CourseNum[-4]) > 4:
+                if ScheduleDict[temp]["Courses"].get(addedList[-1]) == None:
+                    temp = tempList[i+l]
+                    l += 1
+                else:
+                    temp = tempList[l-1]
+                    break
+            '''
+            l = 1
+
+            
+            while CourseName[-3:] == "000":
+                if ScheduleDict[temp]["Courses"].get(addedList[-1]) == None:
+                    temp = tempList[i+l]
+                    l += 1
+                else:
+                    temp = tempList[l-1]
+                    break
+            
+            s = ScheduleDict[temp].get("CreditStart")
+            s = re.split('(\d+)', s)
+            e = ScheduleDict[temp].get("CreditEnd")
+            e = re.split('(\d+)', e)
 
             if ScheduleDict[temp]["Courses"].get(CourseName) == None:
-                cell = cs[0] + cs[1]
+                cell = s[0] + s[1]
                 addCourses = True
 
-            o = int(cs[1])
+            o = int(s[1])
 
-            if cs[0] == "B":
+            if s[0] == "B":
                 b = "A"
-                cell = b + cs[1]
-            elif cs[0] == "D":
+                cell = b + s[1]
+            elif s[0] == "D":
                 b = "C"
-                cell = b + cs[1]
-            elif cs[0] == "F":
+                cell = b + s[1]
+            elif s[0] == "F":
                 b = "E"
-                cell = b + cs[1]
+                cell = b + s[1]
 
             while cell in cellList:
                 o += 1
                 cell = b + str(o)
-                if o > int(ce[1]):
+                if o > int(e[1]):
                     addCourses = False
                     break
 
@@ -208,7 +258,7 @@ def addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, CourseName,
                 worksheet.write(cell, CourseName)
                 ScheduleDict[temp]["Credits"] = credits
                 m = re.split('(\d+)', cell)
-                worksheet.write(cs[0] + m[1], int(InputDict[CourseName].get("Credits")))
+                worksheet.write(s[0] + m[1], int(InputDict[CourseName].get("Credits")))
                 addedList.append(CourseName)
                 cellList.append(cell)
                 loop = False
