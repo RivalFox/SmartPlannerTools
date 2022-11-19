@@ -4,11 +4,34 @@ InputDict = {}
 Schedule = []
 ScheduleList = []
     
-def analyzeData(Schedules, DatabaseDict):
+def analyzeData(filename, database):
+    global InputDict, Schedule, ScheduleList
+    # Open and Read File
+    inputFile = open(os.path.join(".\Input", filename))
+    DatabaseDict = database
+    InputDict = {}
+    #classList = []
+    phrase = "Needed"
+    #count = 0
+    for line in inputFile:
+        #Finds the line that contains the phrase "Needed"
+        if line.find(phrase) != -1: 
+            #Once found, moves onto the next line
+            nextLine = next(inputFile)
+            for word in nextLine.split():
 
-    for x in range(len(Schedules)):
-        InputDict[Schedules[x]] = {}
-        InputDict[Schedules[x]]["Name"] = Schedules[x]
+                if word.isupper() and len(word) == 4:
+                    #print(word)
+
+                    for num in nextLine.split():
+                        if num[0].isdigit() and len(num) > 3:
+                         #print(word + " " + num[:4])
+                         #classList.append(word + " " + num[:4])
+                         className = word + " " + num[:4]
+
+                         InputDict[className] = {}
+                         InputDict[className]["Name"] = className
+                         #Dictionary[word + " " + num[:4]]["Name"] = {}
 
     InputDict["CPSC 1302"] = {}
     InputDict["CPSC 1302"]["Name"] = "CPSC 1302"
