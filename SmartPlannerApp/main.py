@@ -1,19 +1,20 @@
-from Analyzer import analyzeData, getInputDict, getScheduleList
-from Compiler import compileData
-from Database import setDatabase, getDatabase
-from Extractor import extractData, getClassList
-from userInterface import GUI, getStdName, getStdID, getCrHrs, getChoiceList, getInputFile
-import os
+import Analyzer
+import Compiler
+import Database
+import Extractor
+import userInterface
 
 def main():
-	GUI()
-	setDatabase()
 
-	extractData(getInputFile())
+	name, stdID, crHrs, choice1, choice2, choice3, inputFile = userInterface.GUI()
 
-	analyzeData(getClassList(), getDatabase())
+	db = Database.getDatabase()
 
-	compileData(getScheduleList(), getInputDict(), getStdName(), getStdID(), getCrHrs())
+	classList = Extractor.extractData(inputFile)
+
+	scheduleList, inputDict = Analyzer.analyzeData(classList, db)
+
+	Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs)
 
 if __name__ == "__main__":
 	main()

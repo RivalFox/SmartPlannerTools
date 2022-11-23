@@ -8,11 +8,13 @@ from tkinter.messagebox import showinfo
 import os.path
 import tkinter as tk
 
+
 name = ""
 stdID = ""
 crHrs = ""
 choiceList = []
 inputFile = ""
+
 
 def GUI():
 	# create root window
@@ -35,7 +37,7 @@ def GUI():
 	inputFilePath = tk.StringVar()
 
 	def show():
-		global name, stdID, crHrs, choiceList, inputFile
+		
 		name=name_var.get()
 		stdID=stdID_var.get()
 		crHrs= clicked0.get()
@@ -44,10 +46,6 @@ def GUI():
 		choice3 = clicked3.get()
 		inputFile = inputFilePath.get()
 
-		choiceList.append(choice1)
-		choiceList.append(choice2)
-		choiceList.append(choice3)
-
 		stdName = Label (root,text=name).grid(row=9,column=1)
 		ID = Label (root,text=stdID).grid(row=10,column=1)
 		choice0 = Label(root,text=crHrs).grid(row=11,column=1)
@@ -55,8 +53,6 @@ def GUI():
 		myChoice= Label (root, text=choice2).grid(row=13,column=1)
 		myChoice= Label (root, text=choice3).grid(row=14,column=1)
 		selectedInput= Label(root, text=inputFile).grid(row=15,column=1)
-	  #  name=name_var.get()
-	  #  stdID=stdID_var.get()
 	 
 		#print in command line
 		print("The name is : " + name)
@@ -66,12 +62,7 @@ def GUI():
 		print("User selected 2nd interest: " +choice2)
 		print("User selected 3rd interest: " +choice3)
 		print("Selected input file path: " +inputFile)
-
-		name_var.set("")
-		stdID_var.set("")
-
 		
-
 ###################################################################################
 	# creating a label for
 	# name using widget Label
@@ -195,27 +186,14 @@ def GUI():
 	#strChoice= clicked.get()
 	root.mainloop()
 
+	name=name_var.get()
+	stdID=stdID_var.get()
+	crHrs= clicked0.get()
+	choice1 = clicked1.get()
+	choice2 = clicked2.get()
+	choice3 = clicked3.get()
+	inputFile = inputFilePath.get()
 
-def getStdName():
-    return name
-
-def getStdID():
-    return stdID
-
-def getCrHrs():
-    return crHrs
-
-def getChoiceList():
-    return choiceList
-
-def getInputFile():
-	return inputFile
-
-
-#def main():
-#	GUI()
-	
-#if __name__ == "__main__":
-#	main()
+	return name, stdID, crHrs, choice1, choice2, choice3, inputFile
 
 
