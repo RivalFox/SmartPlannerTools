@@ -145,6 +145,9 @@ def addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, CourseName,
 
     addCourses = False
     addCredits = False
+    fixCredits = False
+
+    print(CourseName)
 
     if InputDict[CourseName].get("Prerequisite") != None:
         for key, value in InputDict[CourseName].get("Prerequisite").items():
@@ -169,7 +172,7 @@ def addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, CourseName,
             temp = tempList[i]
 
             if i > len(tempList) - 3:
-                addSemesters(1, worksheet)
+                addSemesters(2, worksheet)
                 tempList.clear()
                 break
 
@@ -187,9 +190,29 @@ def addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, CourseName,
                     if l >= 0 and l < len(tempList):
                         temp = tempList[l]
                         loop2 = False
+                        tempC = int(ScheduleDict[temp].get("Credits")) + int(InputDict[CourseName].get("Credits"))
+                        if tempC > creditLimit:
+                            fixCredits = True
+                        elif tempC <= creditLimit:
+                            fixCredits = False
                     else:
                         loop2 = False 
                         break
+
+            while fixCredits:
+                tempC = int(ScheduleDict[temp].get("Credits")) + int(InputDict[CourseName].get("Credits"))
+                if temp[0:4] == "Summ":
+                    if credits <= summerCreditLimit:
+                        temp = tempList[l+1]
+                        l += 1
+                    else:
+                        fixCredits = False
+                if tempC > creditLimit:
+                    temp = tempList[l+1]
+                    l += 1
+                elif tempC <= creditLimit:
+                    fixCredits = False
+
 
             l = 1
             
