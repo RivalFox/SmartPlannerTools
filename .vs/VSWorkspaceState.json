@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SmartPlannerApp",
+    "\\SmartPlannerApp\\Database"
   ],
-  "SelectedNode": "\\SmartPlannerApp",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
