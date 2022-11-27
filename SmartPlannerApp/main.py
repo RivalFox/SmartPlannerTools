@@ -3,6 +3,7 @@ import Compiler
 import Database
 import Extractor
 import userInterface
+#import cProfile
 
 def main():
 
@@ -18,6 +19,8 @@ def main():
 
 if __name__ == "__main__":
 	main()
+	
+	#cProfile.run('main()')
 
 
 

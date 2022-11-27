@@ -29,6 +29,7 @@ def createList(path, filename):
 	classList = []
 	classes = []
 	classes2 = []
+	classes3 = []
 	inputFile = open(os.path.join(path, filename))
 	phrase = "Needed"
 	for line in inputFile:
@@ -65,6 +66,14 @@ def createList(path, filename):
 	classes2.append("CYBR 3108")
 	classes2.append("CYBR 3115")
 	classes2.append("CYBR 3119")
+
+	for t in range(len(classes)):
+		classes3.append(classes[t])
+
+	for l in range(len(classes2)):
+		classes3.append(classes2[l])
+
 	classList.append(classes2)
+	classList.append(classes3)
 
 	return classList

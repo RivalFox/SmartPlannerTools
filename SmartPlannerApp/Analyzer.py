@@ -8,7 +8,7 @@ def analyzeData(classList, database):
     for x in range(len(classList)):
 
         Available = []
-        Available = classList[x]
+        Available = list(set(classList[x]))
 
         Available.sort(key = lambda x: int("".join([i for i in x if i.isdigit()])))
 
