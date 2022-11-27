@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SmartPlannerApp",
+    "\\SmartPlannerApp\\Database",
+    "\\SmartPlannerApp\\Input"
   ],
-  "SelectedNode": "\\SmartPlannerApp",
+  "SelectedNode": "\\SmartPlannerApp\\Input\\Sample Input1.pdf",
   "PreviewInSolutionExplorer": false
 }
