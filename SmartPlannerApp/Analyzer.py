@@ -7,9 +7,7 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
     scheduledList = []
 
     for x in range(len(stdInterest)):
-        if len(stdInterest) == 0:
-            break
-        else:
+        if stdInterest[x] != "None":
             classList.append(classList[0].copy())
 
     generalElectivesList = []
@@ -37,6 +35,9 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
     loop = True
 
     for x in range(len(classList)):
+
+        if len(classList) == 1:
+            scheduleWeights[x] = 1.0
 
         if x > 0:
             i = 0
