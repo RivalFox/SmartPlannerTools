@@ -19,7 +19,7 @@ addedCells = []
 addedCourses = []
 Schedule = {}
 
-def compileData(scheduleList, courseDatabase, name, id, crHrs):
+def compileData(scheduleList, courseDatabase, name, id, crHrs, scheduleWeights):
     global row, column, year
 
     if crHrs == "Full-time":
@@ -37,6 +37,7 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs):
 
     for x in range(len(scheduleList)):
         workbook = xlsxwriter.Workbook(".\ExcelFiles\Path to Graduation " + str(x + 1) + ".xlsx")
+        print("Path to Graduation " + str(x + 1) + " Recommendation Rate: " + str(scheduleWeights[x] * 100) + "%")
         worksheet = workbook.add_worksheet("Schedule")
 
         ptg_format = workbook.add_format({'bold': True, 'align': 'center', 'font_size': 50})
@@ -60,10 +61,12 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs):
 
             addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, scheduleList[x][f], worksheet, courseDatabase)
 
+        '''
         for key1, value1 in Schedule.items():
             print(key1, ":", value1)
         print("-------------------------------------------------------")
-        
+        '''
+
         Schedule.clear()
         
 

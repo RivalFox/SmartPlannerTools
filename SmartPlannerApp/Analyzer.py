@@ -26,17 +26,20 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
         cpscElectivesList.append(key)
         cpscElectivesWeight.append(float(cpscElectives[key].get("weight")))
             
-    l = 0
     credits = 0
 
     generalCreditsLimit = 6
     cpscCreditLimit = 9
+
+    weight = 0.0
+    scheduleWeights = [0.0]
 
     loop = True
 
     for x in range(len(classList)):
 
         if x > 0:
+            i = 0
             credits = 0
             while loop:
                 cpscElective = random.choices(cpscElectivesList, weights = cpscElectivesWeight, k=1)
@@ -44,6 +47,8 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
                     credits += int(database[cpscElective[0]].get("Credits"))
                     if credits <= cpscCreditLimit:
                         classList[x].append(cpscElective[0])
+                        weight += float(cpscElectives[cpscElective[0]].get("weight"))
+                        i += 1
                         #print("schedule #", x, " has added ", cpscElective[0])
                     else:
                         break
@@ -54,9 +59,13 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
                     credits += int(database[generalElective[0]].get("Credits"))
                     if credits <= generalCreditsLimit:
                         classList[x].append(generalElective[0])
+                        weight += float(generalElectives[generalElective[0]].get("weight"))
+                        i += 1
                         #print("schedule #", x, " has added ", generalElective[0])
                     else:
                         break
+            weight = weight / i
+            scheduleWeights.append(weight)
 
         Available = []
         Available = list(set(classList[x]))
@@ -114,4 +123,4 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
 
         scheduledList.append(Available)
 
-    return scheduledList, scheduleDatabase
+    return scheduledList, scheduleDatabase, scheduleWeights

@@ -21,9 +21,9 @@ def main():
 
 	generalElectives, cpscElectives = InferenceEngine.InferenceEngine(stdInterest, db)
 	
-	scheduleList, inputDict = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
+	scheduleList, inputDict, scheduleWeights = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
 
-	Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs)
+	Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs, scheduleWeights)
 	
 
 if __name__ == "__main__":
