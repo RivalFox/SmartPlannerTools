@@ -1,11 +1,28 @@
 import os
 
-def analyzeData(classList, database):
+def analyzeData(stdInterest, generalElectives, cpscElectives, classList, database):
 
     scheduleDatabase = {}
     scheduledList = []
 
+    for x in range(3):
+        classList.append(classList[0])
+
+    l = 0
+
     for x in range(len(classList)):
+
+        if x > 0:
+            classList[x].extend(cpscElectives)
+            for key, value in generalElectives.items():
+                if l >= 0 and l < len(stdInterest):
+                    if stdInterest[l] == key[0:4]:
+                        print(key)
+                        print(classList[x])
+                        classList[x].append(key)
+                else:
+                    break
+            l += 1
 
         Available = []
         Available = list(set(classList[x]))

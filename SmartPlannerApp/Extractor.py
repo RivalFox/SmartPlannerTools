@@ -52,6 +52,7 @@ def createList(path, filename):
 
 	classList.append(classes)
 
+	'''
 	classes2.append("CPSC 1302")
 	classes2.append("CPSC 1301K")
 	classes2.append("CPSC 2108")
@@ -75,5 +76,6 @@ def createList(path, filename):
 
 	classList.append(classes2)
 	classList.append(classes3)
+	'''
 
 	return classList
