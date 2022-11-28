@@ -22,6 +22,7 @@ Schedule = {}
 def compileData(scheduleList, courseDatabase, name, id, crHrs, scheduleWeights):
     global row, column, year
 
+    #depending on the user choice, they are able to decide how many credits they prefer to have
     if crHrs == "Full-time":
         creditLimit = 15
         summerCreditLimit = 9
@@ -51,6 +52,7 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs, scheduleWeights):
         row = 3
         column = 0
 
+        #function to add semesters
         addSemesters(1, worksheet)
         
         for f in range(len(scheduleList[x])):
@@ -71,7 +73,7 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs, scheduleWeights):
 
         Schedule.clear()
         
-
+        #formating the columns width
         worksheet.set_column(0, 2, 25)
         worksheet.set_column(0, 4, 25)  
         worksheet.set_column('A:A', 25)
@@ -142,12 +144,14 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
     addSemester = False
     fixCredits = False
 
+    #gets the courses prerequisites
     if courseDatabase[courseName].get("Prerequisite") != None:
         for key, value in courseDatabase[courseName].get("Prerequisite").items():
             prereqCourses.append(key)
 
     while loop:
         
+        #get the semesters the course is available
         for x in range(len(keyList)):
             if fall == True and keyList[x][0:4] == "Fall":
                 semesterList.append(keyList[x])
@@ -160,6 +164,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
 
             semester = semesterList[i]
 
+            #add more semesters if there is not enough space to add courses
             if i > len(semesterList) - 3:
                 addSemesters(1, worksheet)
                 semesterList.clear()
@@ -167,6 +172,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
 
             l = 1
 
+            #checks if a prerequisite is added to the schedule
             for k in range(len(prereqCourses)):
                 if prereqCourses[k] in addedCourses:
                     loop2 = True
@@ -189,6 +195,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
                     else:
                         loop2 = False 
 
+            #if a semester after the course prerequisite is already full, go to the available semester
             while fixCredits:
                 credits = int(Schedule[semester].get("Credits")) + int(courseDatabase[courseName].get("Credits"))
                 if semester[0:4] == "Summ":
@@ -207,6 +214,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
                 elif credits <= creditLimit:
                     fixCredits = False
 
+            #add more semesters if there is not enough space to add courses
             if addSemester == True:
                 addSemesters(1, worksheet)
                 semesterList.clear()
@@ -215,15 +223,18 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
 
             l = 1
             
+            #get the first cell and last cell that courses can be added in
             CreditStart = Schedule[semester].get("CreditStart")
             splitCreditStart = re.split('(\d+)', CreditStart)
             CreditEnd = Schedule[semester].get("CreditEnd")
             splitCreditEnd = re.split('(\d+)', CreditEnd)
 
+            #check if the course is not in the current semester
             if Schedule[semester]["Courses"].get(courseName) == None:
                 cell = CreditStart[0] + CreditStart[1]
                 addCourses = True
 
+            #B, D, F is where the credits are added, A, C, E is where the course name gets added
             if splitCreditStart[0] == "B":
                 column = "A"
                 cell = column + splitCreditStart[1]
@@ -236,6 +247,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
 
             row = int(splitCreditStart[1])
 
+            #checks in the cell that is assigned to the course has been used, if it has, go to the next available cell
             while cell in addedCells:
                 row += 1
                 cell = column + str(row)
@@ -243,6 +255,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
                     addCourses = False
                     break
 
+            #check if the semester is summ or not, afterwards checks if there is space to add the course into that semester based on their credits
             if semester[0:4] != "Summ":
                 credits = int(Schedule[semester].get("Credits")) + int(courseDatabase[courseName].get("Credits"))
                 addCredits = checkCreditLimit(credits, creditLimit)
@@ -250,6 +263,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
                 credits = int(Schedule[semester].get("Credits")) + int(courseDatabase[courseName].get("Credits"))
                 addCredits = checkSummerCreditLimit(credits, summerCreditLimit)
 
+            #if addCourses is true and addCredits is true, the course will be added to the semester
             if addCourses == True and addCredits == True:
 
                 Schedule[semester]["Courses"][courseName] = cell
@@ -259,6 +273,7 @@ def addtoExcel(fall, spring, summer, creditLimit, summerCreditLimit, courseName,
                 SplitCell = re.split('(\d+)', cell)
                 worksheet.write(splitCreditStart[0] + SplitCell[1], int(courseDatabase[courseName].get("Credits")))
 
+                #when a course gets added, it gets saved in addedCourses and its location gets added to addedCells
                 addedCourses.append(courseName)
                 addedCells.append(cell)
 
