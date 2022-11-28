@@ -60,11 +60,11 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs):
 
             addtoExcel(Fall, Spring, Summer, creditLimit, summerCreditLimit, scheduleList[x][f], worksheet, courseDatabase)
 
-        
         for key1, value1 in Schedule.items():
             print(key1, ":", value1)
-        Schedule.clear()
         print("-------------------------------------------------------")
+        
+        Schedule.clear()
         
 
         worksheet.set_column(0, 2, 25)

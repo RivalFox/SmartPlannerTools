@@ -20,12 +20,6 @@ def main():
 	classList = Extractor.extractData(inputFile)
 
 	generalElectives, cpscElectives = InferenceEngine.InferenceEngine(stdInterest, db)
-
-	stdInterest = []
-
-	for key, value in generalElectives.items():
-		stdInterest.append(key[0:4])
-		stdInterest = list(set(stdInterest))
 	
 	scheduleList, inputDict = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
 

@@ -56,7 +56,7 @@ def GUI():
 	 
 		#print in command line
 		print("The name is : " + name)
-		print("The password is : " + stdID)
+		print("The student ID is : " + stdID)
 		print("User selected credit hours: " +crHrs)
 		print("User selected 1st interest: " +choice1)
 		print("User selected 2nd interest: " +choice2)

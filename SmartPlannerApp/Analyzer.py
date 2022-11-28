@@ -1,28 +1,62 @@
 import os
+import random
 
 def analyzeData(stdInterest, generalElectives, cpscElectives, classList, database):
 
     scheduleDatabase = {}
     scheduledList = []
 
-    for x in range(3):
-        classList.append(classList[0])
+    for x in range(len(stdInterest)):
+        if len(stdInterest) == 0:
+            break
+        else:
+            classList.append(classList[0].copy())
 
+    generalElectivesList = []
+    generalElectivesWeight = []
+
+    for key, value in generalElectives.items():
+        generalElectivesList.append(key)
+        generalElectivesWeight.append(float(generalElectives[key].get("weight")))
+
+    cpscElectivesList = []
+    cpscElectivesWeight = []
+
+    for key, value in cpscElectives.items():
+        cpscElectivesList.append(key)
+        cpscElectivesWeight.append(float(cpscElectives[key].get("weight")))
+            
     l = 0
+    credits = 0
+
+    generalCreditsLimit = 6
+    cpscCreditLimit = 9
+
+    loop = True
 
     for x in range(len(classList)):
 
         if x > 0:
-            classList[x].extend(cpscElectives)
-            for key, value in generalElectives.items():
-                if l >= 0 and l < len(stdInterest):
-                    if stdInterest[l] == key[0:4]:
-                        print(key)
-                        print(classList[x])
-                        classList[x].append(key)
-                else:
-                    break
-            l += 1
+            credits = 0
+            while loop:
+                cpscElective = random.choices(cpscElectivesList, weights = cpscElectivesWeight, k=1)
+                if cpscElective not in classList[x]:
+                    credits += int(database[cpscElective[0]].get("Credits"))
+                    if credits <= cpscCreditLimit:
+                        classList[x].append(cpscElective[0])
+                        #print("schedule #", x, " has added ", cpscElective[0])
+                    else:
+                        break
+            credits = 0
+            while loop:
+                generalElective = random.choices(generalElectivesList, weights = generalElectivesWeight, k=1)
+                if generalElective not in classList[x]:
+                    credits += int(database[generalElective[0]].get("Credits"))
+                    if credits <= generalCreditsLimit:
+                        classList[x].append(generalElective[0])
+                        #print("schedule #", x, " has added ", generalElective[0])
+                    else:
+                        break
 
         Available = []
         Available = list(set(classList[x]))

@@ -60,8 +60,10 @@ def InferenceEngine(list1,database1):
     global finalGlist
     finalGlist={}
 
+    '''
     for i in range(len(searchList)):
         print(searchList[i])
+    '''
 
     #check the database and grab all the classes related to interests
     for key, value in DatabaseDict.items():
@@ -233,13 +235,16 @@ def InferenceEngine(list1,database1):
 
     #if there is weight already, then add new weight/2 
     #constantly update it 
+    '''
     print("\nFinal computer science electives list below\n")
     for key, value in finalCslist.items():
         print("Final results courses: ", key, value)
-
+    '''
+    '''
     print("\nFinal general electives lists below\n")
     for key, value in finalGlist.items():
         print("Final results courses: ", key, value)
+    '''
     #1st interest should have higher weight then 2nd, 2nd higher than 3rd. 
     #if student is freshmen, choose 1000 lvl electives
     #if student is sophomore and junior, choose 2000 lvl electives
