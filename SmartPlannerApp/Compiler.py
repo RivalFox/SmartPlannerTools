@@ -37,7 +37,9 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs, scheduleWeights):
 
     for x in range(len(scheduleList)):
         workbook = xlsxwriter.Workbook(".\ExcelFiles\Path to Graduation " + str(x + 1) + ".xlsx")
-        print("Path to Graduation " + str(x + 1) + " Recommendation Rate: " + str(scheduleWeights[x] * 100) + "%")
+        weight = scheduleWeights[x] * 100
+        roundedWeight = round(weight, 2)
+        print("Path to Graduation " + str(x + 1) + " | Recommendation Rate: " + str(roundedWeight) + "%")
         worksheet = workbook.add_worksheet("Schedule")
 
         ptg_format = workbook.add_format({'bold': True, 'align': 'center', 'font_size': 50})
@@ -45,7 +47,7 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs, scheduleWeights):
         worksheet.write(0, 2, name)
         worksheet.write(0, 4, id)
         worksheet.merge_range(1, 0, 1, 5, "Path To Graduation", ptg_format)
-
+        
         row = 3
         column = 0
 
