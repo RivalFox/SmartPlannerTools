@@ -42,7 +42,7 @@ How to run in command prompt
 How to run in Visual Studios
 * Select the folder SmartPlannerApp then open the file with Visual Studios
 * Open main.py in Visual Studios and in the top middle of Visual Studios, click on run. The current document should be main.py.
-* To run WebExtraction.py, open WebExtraction.py and set the current document to WebExtraction.py. Click on run
+* To run WebExtraction.py, set the current document to WebExtraction.py. Click on run
   
 ============================================================================================
   
