@@ -4,6 +4,7 @@ import pickle
 import shutil
 import os
 from pathlib import Path
+import random
 
 
 DatabaseDict = {}
@@ -20,9 +21,9 @@ SwitchLoopDict = {
 i = 0
 
 def extractHTML():
-	#'''
+	
 	links = ["https://catalog.columbusstate.edu/course-descriptions/acct/", 
-		  "https://catalog.columbusstate.edu/course-descriptions/anth/", 
+		  "https://catalog.columbusstate.edu/course-descriptions/anth/",
 		  "https://catalog.columbusstate.edu/course-descriptions/arab/", 
 		  "https://catalog.columbusstate.edu/course-descriptions/arth/",
 		  "https://catalog.columbusstate.edu/course-descriptions/arts/",
@@ -135,7 +136,6 @@ def extractHTML():
 		  "https://catalog.columbusstate.edu/course-descriptions/mba/",
 		  "https://catalog.columbusstate.edu/course-descriptions/mph/",
 		  "https://catalog.columbusstate.edu/course-descriptions/wmba/"]
-	#'''
 
 	for url in links:
 		list = []
@@ -212,7 +212,7 @@ def extractHTML():
 				tempList.clear()
 				continue
 
-	with open('.\Database\database.pkl', 'wb') as f:
+	with open('.\Database\RandDatabase.pkl', 'wb') as f:
 		pickle.dump(DatabaseDict, f)
 
 
@@ -238,9 +238,18 @@ def addtoPrerequisite(key, string):
 	DatabaseDict[key]["Prerequisite"][string.replace("~", "")] = ""
 
 def addtoSemester(key):
-	DatabaseDict[key]["Semester"]["Spring"] = True
-	DatabaseDict[key]["Semester"]["Summer"] = False
+	r = random.randint(0, 1)
+
 	DatabaseDict[key]["Semester"]["Fall"] = True
+	DatabaseDict[key]["Semester"]["Spring"] = True
+
+	if r == 0:
+		DatabaseDict[key]["Semester"]["Summer"] = True
+	else:
+		DatabaseDict[key]["Semester"]["Summer"] = False
 
 if __name__ == "__main__":
 	extractHTML()
+
+	for key in DatabaseDict.items():
+		print(key)

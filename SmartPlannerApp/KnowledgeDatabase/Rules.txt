@@ -1,0 +1,46 @@
+#https://pyke.sourceforge.net/logic_programming/index.html
+
+#General electives with pre will not be chosen as general electives
+#Inference engine will have only classes about 
+#It requires 10 credits
+
+#We don't really need to specify the COURSE 4 digit
+#
+#Finance class
+RULE: FINC 1 C 0.5
+RULE: FINC 2 C 0.4
+RULE: FINC 3 C 0.3
+#Psychology
+RULE: PSYC 1 C 0.5
+RULE: PSYC 2 C 0.4
+RULE: PSYC 3 C 0.3
+#"Statistics"  = STAT
+RULE: STAT 1 C 0.5
+RULE: STAT 2 C 0.4
+RULE: STAT 3 C 0.3
+#"Kinesiology" = KINS
+RULE: KINS 1 C 0.5
+RULE: KINS 2 C 0.4
+RULE: KINS 3 C 0.3
+#"Geology"     = GEOL
+RULE: GEOL 1 C 0.5
+RULE: GEOL 2 C 0.4
+RULE: GEOL 3 C 0.3
+#"Art History" = ARTH
+RULE: ARTH 1 C 0.5
+RULE: ARTH 2 C 0.4
+RULE: ARTH 3 C 0.3
+
+#Rule (How to know what is the first interest, second, and third)?
+
+
+#start with 3 will have the higher confidence score
+#Compute science electives 
+RULE: CPSC 3 C 0.9
+RULE: CPSC 4 C 0.8
+RULE: CYBR 3 C 0.9
+RULE: CYBR 4 C 0.8
+
+
+#How should I check the prereq?
+#How do I know if prereq for this class is taken or not?

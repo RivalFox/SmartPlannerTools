@@ -28,7 +28,6 @@ def extractData(path):
 def createList(path, filename):
 	classList = []
 	classes = []
-	classes2 = []
 	inputFile = open(os.path.join(path, filename))
 	phrase = "Needed"
 	for line in inputFile:
@@ -50,21 +49,5 @@ def createList(path, filename):
 	inputFile.close()
 
 	classList.append(classes)
-
-	classes2.append("CPSC 1302")
-	classes2.append("CPSC 1301K")
-	classes2.append("CPSC 2108")
-	classes2.append("CPSC 4115")
-	classes2.append("CPSC 4111")
-	classes2.append("CPSC 6180")
-	classes2.append("CPSC 6185")
-	classes2.append("CPSC 6985")
-	classes2.append("CYBR 2159")
-	classes2.append("CYBR 2160")
-	classes2.append("CYBR 3106")
-	classes2.append("CYBR 3108")
-	classes2.append("CYBR 3115")
-	classes2.append("CYBR 3119")
-	classList.append(classes2)
 
 	return classList

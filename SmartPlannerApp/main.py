@@ -3,21 +3,33 @@ import Compiler
 import Database
 import Extractor
 import userInterface
+import InferenceEngine
+#import cProfile
 
 def main():
 
 	name, stdID, crHrs, choice1, choice2, choice3, inputFile = userInterface.GUI()
 
+	stdInterest = []
+	stdInterest.append(choice1)
+	stdInterest.append(choice2)
+	stdInterest.append(choice3)
+
 	db = Database.getDatabase()
 
 	classList = Extractor.extractData(inputFile)
 
-	scheduleList, inputDict = Analyzer.analyzeData(classList, db)
+	generalElectives, cpscElectives = InferenceEngine.InferenceEngine(stdInterest, db)
+	
+	scheduleList, inputDict, scheduleWeights = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
 
-	Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs)
+	Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs, scheduleWeights)
+	
 
 if __name__ == "__main__":
 	main()
+	
+	#cProfile.run('main()')
 
 
 
