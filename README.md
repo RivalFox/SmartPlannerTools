@@ -6,7 +6,7 @@ This software requires one input to generate an output excel form where recommen
 
 The input is the list of courses a student still needs until the student’s graduation, which will be obtained from Degreeworks as a pdf document. If the student select any interest, additional schedules will be made from those interest.
 
-=====================================================================================================
+============================================================================================
 
 Dependencies
   * Python Environments:
@@ -31,7 +31,7 @@ Dependencies
     * XlsxWriter==3.0.3
     * yarg==0.1.9
     
-=====================================================================================================
+============================================================================================
 
 How to run in command prompt
 * Open the command prompt and change your current working directory to the SmartPlannerApp folder. 
@@ -44,7 +44,7 @@ How to run in Visual Studios
 * Open main.py in Visual Studios and in the top middle of Visual Studios, click on run. The current document should be main.py.
 * To run WebExtraction.py, open WebExtraction.py and set the current document to WebExtraction.py. Click on run
   
-=====================================================================================================
+============================================================================================
   
 Authors
 * Timothy Potter
