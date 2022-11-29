@@ -9,7 +9,7 @@ The input is the list of courses a student still needs until the student’s gra
 =====================================================================================================
 
 Dependencies
-  Python Environments:
+  * Python Environments:
     beautifulsoup4==4.11.1
     bs4==0.0.1
     certifi==2022.9.24
@@ -34,13 +34,13 @@ Dependencies
 =====================================================================================================
 
 How to run in command prompt
-  Open the command prompt and change your current working directory to the SmartPlannerApp folder. 
-  Type main.py or python main.py in the command prompt to run the program.
-  To run WebExtraction.py, change your current working directory to the Database folder
-  Type WebExtraction.py or python WebExtraction.py to run the program.
+Open the command prompt and change your current working directory to the SmartPlannerApp folder. 
+Type main.py or python main.py in the command prompt to run the program.
+To run WebExtraction.py, change your current working directory to the Database folder
+Type WebExtraction.py or python WebExtraction.py to run the program.
   
 How to run in Visual Studios
-  Select the folder SmartPlannerApp then open the file with Visual Studios
+Select the folder SmartPlannerApp then open the file with Visual Studios
   Open main.py in Visual Studios and in the top middle of Visual Studios, click on run. The current document should 
   be main.py.
   To run WebExtraction.py, open WebExtraction.py and set the current document to WebExtraction.py. Click on run
