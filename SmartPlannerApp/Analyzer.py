@@ -55,7 +55,6 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
                     if credits <= cpscCreditLimit:
                         classList[x].append(cpscElective[0])
                         weight += float(cpscElectives[cpscElective[0]].get("weight"))
-                        print(cpscElective[0])
                         i += 1
                     else:
                         break
@@ -68,7 +67,6 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
                     if credits <= generalCreditsLimit:
                         classList[x].append(generalElective[0])
                         weight += float(generalElectives[generalElective[0]].get("weight"))
-                        print(generalElective[0])
                         i += 1
                     else:
                         break
@@ -137,6 +135,5 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
                 continue
 
         scheduledList.append(Available)
-        print("-----------------------------")
 
     return scheduledList, scheduleDatabase, scheduleWeights

@@ -4,6 +4,7 @@ import Database
 import Extractor
 import userInterface
 import InferenceEngine
+import sys
 #import cProfile
 
 def main():
@@ -24,6 +25,8 @@ def main():
 	scheduleList, inputDict, scheduleWeights = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
 
 	Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs, scheduleWeights)
+
+	sys.exit()
 	
 
 if __name__ == "__main__":

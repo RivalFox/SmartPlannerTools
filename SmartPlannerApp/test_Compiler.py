@@ -2,7 +2,9 @@ import Analyzer
 import Compiler
 import Database
 import Extractor
+import InferenceEngine
 
+stdInterest = ["Psychology", "Statistics", "Geology"]
 
 def test_compile_data_full_time():
     name = 'user'
@@ -21,14 +23,15 @@ def test_compile_data_full_time():
 
     classList = Extractor.extractData(inputFile)
 
-    scheduleList, inputDict = Analyzer.analyzeData(classList, db)
+    generalElectives, cpscElectives = InferenceEngine.InferenceEngine(stdInterest, db)
+    scheduleList, inputDict, scheduleWeights = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
 
     import os
     inputFiles = ['./ExcelFiles/Path to Graduation 1.xlsx', './ExcelFiles/Path to Graduation 2.xlsx']
     for inputFile in inputFiles:
         if os.path.isfile(inputFile):
             os.remove(inputFile)
-    Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs)
+    Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs, scheduleWeights)
     for inputFile in inputFiles:
         assert os.path.isfile(inputFile)
 
@@ -47,9 +50,10 @@ def test_compile_data_schedule_in_xlsx():
     inputFile = './Input/Sample Input1.pdf'
     db = Database.getDatabase()
     classList = Extractor.extractData(inputFile)
-    scheduleList, inputDict = Analyzer.analyzeData(classList, db)
+    generalElectives, cpscElectives = InferenceEngine.InferenceEngine(stdInterest, db)
+    scheduleList, inputDict, scheduleWeights = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
     inputFiles = ['./ExcelFiles/Path to Graduation 1.xlsx', './ExcelFiles/Path to Graduation 2.xlsx']
-    Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs)
+    Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs, scheduleWeights)
 
     import pandas as pd
 
