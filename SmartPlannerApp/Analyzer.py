@@ -102,15 +102,6 @@ def analyzeData(stdInterest, generalElectives, cpscElectives, classList, databas
             else:
                 continue
 
-        '''
-        Temp = []
-        Temp = Available
-        for i in range(len(Temp)):
-            if "000" in Temp[i]:
-                Available.append(Temp[i])
-                Available.remove(Temp[i])
-        '''
-
         Temp = []
         Temp = Available
 

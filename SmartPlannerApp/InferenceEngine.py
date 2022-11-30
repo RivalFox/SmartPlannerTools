@@ -60,17 +60,11 @@ def InferenceEngine(list1,database1):
     global finalGlist
     finalGlist={}
 
-    '''
-    for i in range(len(searchList)):
-        print(searchList[i])
-    '''
-
     #check the database and grab all the classes related to interests
     for key, value in DatabaseDict.items():
         #General electives
         for i in range(len(searchList)):
             if key[0:4] == searchList[i]:
-                #print (key, value)
                 #All the classes need to be put into a electiveslist
                 electiveslist[key] = value
         #CS electives
@@ -79,13 +73,6 @@ def InferenceEngine(list1,database1):
                 #All the classes need to be put into a csElectiveslist
                 csElectiveslist[key] = value
        
-
-    #Print general elective list
-    #for key, value in electiveslist.items():
-    #    print(key,value)
-    #Print compute sciecne elective list
-    #for key, value in csElectiveslist.items():
-    #    print(key,value)
 
             
     #Need to create rule text file and save all the rules 
@@ -113,18 +100,12 @@ def InferenceEngine(list1,database1):
     for key, value in csElectiveslist.items():
         if key in coreCSList:
             #size is changed during the iteration
-            #print(key)
             deleteList.append(key)
-            #csElectiveslist.pop(key)
 
     #delete the core classes from the cs elective list
     for i in range(len(deleteList)):
         csElectiveslist.pop(deleteList[i])
 
-
-    #to check the after deletion of core classes
-    #for key, value in csElectiveslist.items():
-    #    print(key,value)
 
 
     #####################getting rule text file#######################
@@ -149,16 +130,6 @@ def InferenceEngine(list1,database1):
             if line.find(word) != -1:
 
                 words = line.split()
-                #RULE
-                #print("first word", words[0])
-                #4digits
-                #print("second word", words[1])
-                #first nubmer of course level
-                #print("third word", words[2])
-                #C confidence score
-                #print("fourth word", words[3])
-                #weight
-                #print("fifth word", words[4])
 
                 for key in csElectiveslist:
                     #key[0:4] = CPSC or CYBR in possible list
@@ -167,7 +138,6 @@ def InferenceEngine(list1,database1):
                         
                         if key[5:6]==words[2]:
                             #Need to add weight value to each course
-                            #print("3000 level course: ",key)
                             #Put in a new cs elective list with weight
                             
                             csElectiveslist[key]["weight"] = words[4]
@@ -176,7 +146,6 @@ def InferenceEngine(list1,database1):
 
                         if key[5:6]==words[2]:
                             #Put in a new cs elective list with weight
-                            #print("4000 level course: ",key)
                             #Put in a new cs elective list with weight
                             csElectiveslist[key]["weight"] = words[4]
 
@@ -208,43 +177,27 @@ def InferenceEngine(list1,database1):
     for key, value in csElectiveslist.items():
         #You can get the courses only with weight
         if csElectiveslist[key].get("weight")==None:
-            #print("Not present")
             continue
         else:
-            #print("Present: ",key ," and ", csElectiveslist[key])
             #Here I can get courses that has weight but prereq
             if csElectiveslist[key].get("Prerequisite")==None:
                 finalCslist[key]=value
-                #print("Present without prereq: ", key, " ", csElectiveslist[key] )
 
     for key, value in electiveslist.items():
         #You can get the courses only with weight
         if electiveslist[key].get("weight")==None:
-            #print("Not present")
             continue
 
         else:
-            #print("Present: ",key ," and ", csElectiveslist[key])
             #Here I can get courses that has weight but prereq
             if electiveslist[key].get("Prerequisite")==None:
                 finalGlist[key]=value
-                #print("Present without prereq: ", key, " ", csElectiveslist[key] )
 
 
 
 
     #if there is weight already, then add new weight/2 
     #constantly update it 
-    '''
-    print("\nFinal computer science electives list below\n")
-    for key, value in finalCslist.items():
-        print("Final results courses: ", key, value)
-    '''
-    '''
-    print("\nFinal general electives lists below\n")
-    for key, value in finalGlist.items():
-        print("Final results courses: ", key, value)
-    '''
     #1st interest should have higher weight then 2nd, 2nd higher than 3rd. 
     #if student is freshmen, choose 1000 lvl electives
     #if student is sophomore and junior, choose 2000 lvl electives
@@ -259,14 +212,4 @@ def InferenceEngine(list1,database1):
     #add elective with higher score to the list first in order. 
 
     return finalGlist, finalCslist
-
-'''
-#getter for elective list
-def getElectiveList():
-    #returns a dictionary
-    return finalGlist  
-#getter for cs elective list  
-def getCSelectiveList():
-    return finalCslist
-'''
    

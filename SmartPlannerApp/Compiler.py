@@ -88,7 +88,6 @@ def compileData(scheduleList, courseDatabase, name, id, crHrs, scheduleWeights):
 
         workbook.close()
 
-    sys.exit()
 
 def addSemesters(amount, worksheet):
     global row, column, year

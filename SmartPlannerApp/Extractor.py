@@ -15,7 +15,6 @@ def extractData(path):
 		pdfData = page1.extractText()         
 		extractedInput.append(pdfData)
 		contents = '\n'.join(extractedInput)
-		#print(pdfData)
 	#The extracted data should be saved in text file
 	txtFile = open(os.path.join(".\Input","inputText.txt"), "w", encoding = 'utf-8')	
 	txtFile.writelines(contents)
@@ -39,11 +38,9 @@ def createList(path, filename):
 			for word in nextLine.split():
 
 				if word.isupper() and len(word) == 4:
-					#print(word)
 
 					for num in nextLine.split():
 						if num[0].isdigit() and len(num) > 3:
-							#print(word + " " + num[:4])
 							classes.append(word + " " + num[:4])
 
 	inputFile.close()

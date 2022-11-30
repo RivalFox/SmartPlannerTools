@@ -10,7 +10,7 @@ def getDatabase():
         print("database.pkl is missing from Database folder, run WebExtraction.py to generate database.pk")
         print("Webextraction.py is located in " + os.path.abspath(__file__).strip("Database.py") + "Database")
         print("##########################################################################################################")
-        sys.exit()
+        # sys.exit()
     
     with open('.\Database\RandDatabase.pkl', 'rb') as f:
         database = pickle.load(f)

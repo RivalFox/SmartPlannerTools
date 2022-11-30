@@ -4,7 +4,8 @@ import Database
 import Extractor
 import userInterface
 import InferenceEngine
-#import cProfile
+import sys
+import cProfile
 
 def main():
 
@@ -24,11 +25,14 @@ def main():
 	scheduleList, inputDict, scheduleWeights = Analyzer.analyzeData(stdInterest, generalElectives, cpscElectives, classList, db)
 
 	Compiler.compileData(scheduleList, inputDict, name, stdID, crHrs, scheduleWeights)
+
+	sys.exit()
 	
 
 if __name__ == "__main__":
 	main()
 	
+	#comment out main() and uncomment out cProfile.run to run the program and see where performance is slow in the program
 	#cProfile.run('main()')
 
 
